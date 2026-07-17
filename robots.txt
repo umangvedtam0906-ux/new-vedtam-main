@@ -3,8 +3,6 @@ Allow: /
 Sitemap: https://www.vedtam.com/sitemap.xml
 
 # Disallow scripts and data files
-Disallow: /*.js
-Disallow: /*.json
 Disallow: /*.mjs
 Disallow: /*.ps1
 Disallow: /*.vbs
