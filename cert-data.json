@@ -1,5 +1,63 @@
 [
   {
+    "title": "Multiple vulnerabilities in Drupal products",
+    "severity": "high",
+    "date": "2026-07-17",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0366",
+    "code": "CIVN-2026-0366",
+    "summary": "Multiple vulnerabilities have been reported in Drupal plugins, which could allow an attacker to perform cross-site scripting (XSS) attacks, bypass access restrictions, upload malicious files, and execute unauthorized access on the targeted system.",
+    "description": "Drupal is an open-source Content Management System (CMS) which allows individuals and organizations to create, manage and maintain websites and web applications. Multiple vulnerabilities exist in Drupal Core due to improper validation, improper access control, and improper sanitization of user supplied input. Successful exploitation of these vulnerabilities could allow could allow an attacker to perform cross-site scripting (XSS) attacks, bypass access restrictions, upload malicious files, and execute unauthorized access on the targeted system.",
+    "softwareAffected": [
+      "Drupal Canvas AI submodule versions prior to 1.4.2, 1.5.0 to 1.5.1, 1.6.0, and 1.7.1.",
+      "FlowDrop module versions prior to 1.6.0.",
+      "Colorbox module versions prior to 2.1.5 and 2.2.1."
+    ],
+    "targetAudience": "All end-user organizations and individuals using the affected Drupal plugins.",
+    "riskAssessment": "Risk of cross-site scripting attacks, bypass access restrictions, execution malicious file upload, and execute unauthorized access.",
+    "impactAssessment": "Potential for unauthorized access to sensitive information, data theft, malicious file uploads, and full compromise of the affected system.",
+    "cves": [
+      "CVE-2026-58587",
+      "CVE-2026-58588",
+      "CVE-2026-58589",
+      "CVE-2026-58590",
+      "CVE-2026-58591"
+    ],
+    "solutionLinks": []
+  },
+  {
+    "title": "Multiple Vulnerabilities in Microsoft Products",
+    "severity": "high",
+    "date": "2026-07-17",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES02&VLCODE=CIAD-2026-0035",
+    "code": "CIAD-2026-0035",
+    "summary": "Multiple vulnerabilities have been reported in Microsoft products that could allow an attacker to gain elevated privileges, obtain sensitive information, execute arbitrary code remotely, bypass security restrictions, conduct spoofing attacks, perform tampering of data or system processes, or cause denial-of-service (DoS) conditions.",
+    "description": "Multiple vulnerabilities have been reported in Microsoft products that could allow an attacker to gain elevated privileges, obtain sensitive information, execute arbitrary code remotely, bypass security restrictions, conduct spoofing attacks, perform tampering of data or system processes, or cause denial-of-service (DoS) conditions. CVE-2026-56155: This vulnerability exists in Microsoft Active Directory Federation Services (AD FS) due to insufficient granularity of access control. An authenticated attacker could exploit this vulnerability to elevate privileges on the affected system. CVE-2026-56164: This vulnerability exists in Microsoft Office SharePoint due to missing authentication for a critical function. An unauthenticated attacker could exploit this vulnerability over a network to elevate privileges. CVE-2026-58644: This vulnerability exists in Microsoft Office SharePoint due to deserialization of untrusted data. An unauthenticated attacker could exploit this vulnerability by sending specially crafted requests to execute arbitrary code on the target server over a network. Note: The vulnerabilities CVE-2026-56155 CVE-2026-56164 and CVE-2026-58644 are being exploited in the wild. Users are advised to apply patches immediately. For complete list of affected products, CVEs, workarounds and",
+    "softwareAffected": [
+      "Microsoft Windows",
+      "Microsoft Office",
+      "Microsoft Dynamics",
+      "Developer Tools",
+      "SQL Server",
+      "Extended Security Updates (ESU) for legacy Microsoft products",
+      "Azure",
+      "Apps",
+      "Device",
+      "Open Source Software",
+      "Server Software",
+      "System Center",
+      "Other (Microsoft Copilot, Minecraft Bedrock Dedicated Server, GitHub Copilot Plugin for JetBrains IDEs, Age of Empires II: Definitive Edition Game)"
+    ],
+    "targetAudience": "Individuals and IT administrators, security teams responsible for maintaining and updating Microsoft products.",
+    "riskAssessment": "Risk of remote code execution, system instability or sensitive information disclosure.",
+    "impactAssessment": "Potential compromise of system, exfiltration of data, ransomware attacks or system crashes.",
+    "cves": [
+      "CVE-2026-56155",
+      "CVE-2026-56164",
+      "CVE-2026-58644"
+    ],
+    "solutionLinks": []
+  },
+  {
     "title": "Multiple Vulnerabilities in Mozilla Firefox",
     "severity": "critical",
     "date": "2026-07-16",
@@ -92,6 +150,21 @@
     "solutionLinks": []
   },
   {
+    "title": "CERT-In Advisory CICA-2026-3536",
+    "severity": "high",
+    "date": "2026-07-13",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBADV01&CACODE=CICA-2026-3536",
+    "code": "CICA-2026-3536",
+    "summary": "Multiple vulnerabilities reported.",
+    "description": "",
+    "softwareAffected": "",
+    "targetAudience": "",
+    "riskAssessment": "",
+    "impactAssessment": "",
+    "cves": [],
+    "solutionLinks": []
+  },
+  {
     "title": "Multiple Vulnerabilities in Ivanti Sentry",
     "severity": "critical",
     "date": "2026-07-13",
@@ -111,21 +184,6 @@
       "CVE-2026-10520",
       "CVE-2026-10523"
     ],
-    "solutionLinks": []
-  },
-  {
-    "title": "CERT-In Advisory CICA-2026-3536",
-    "severity": "high",
-    "date": "2026-07-13",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBADV01&CACODE=CICA-2026-3536",
-    "code": "CICA-2026-3536",
-    "summary": "Multiple vulnerabilities reported.",
-    "description": "",
-    "softwareAffected": "",
-    "targetAudience": "",
-    "riskAssessment": "",
-    "impactAssessment": "",
-    "cves": [],
     "solutionLinks": []
   },
   {
