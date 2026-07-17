@@ -1,14 +1,14 @@
 <?php
 /**
  * otp-handler.php
- * Handles OTP Generation, Email sending, and Verification.
- * Saves pending OTPs securely to pending-otps.json.
+ * Handles OTP Generation, Email sending, and Verification via SQLite and SMTP.
  */
 
-// Enable output buffering to avoid any trailing whitespaces/BOM issues
 ob_start();
-
 header('Content-Type: application/json');
+
+require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/SmtpClient.php';
 
 // CORS setup
 $allowed_origins = [
@@ -37,61 +37,69 @@ $input = json_decode(file_get_contents('php://input'), true);
 if (!$input) $input = $_POST;
 
 $action = trim($input['action'] ?? '');
-$email  = trim($input['email'] ?? '');
+$email  = strtolower(trim($input['email'] ?? ''));
 $name   = trim($input['name'] ?? 'Subscriber');
+$ip     = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
 
 if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     echo json_encode(['success' => false, 'message' => 'Please enter a valid email address.']);
     exit;
 }
 
-// Restriction check for personal domains
-$personalDomains = [
-    'aol.com','rediffmail.com','protonmail.com','proton.me','tutanota.com','gmx.com','gmx.net',
-    'mailinator.com','guerrillamail.com','10minutemail.com','tempmail.com','throwam.com','yopmail.com',
-    'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com'
-];
-$emailDomain = strtolower(substr(strrchr($email, '@'), 1));
-if (in_array($emailDomain, $personalDomains, true)) {
+// Restriction check for personal domains using config.php
+$emailDomain = substr(strrchr($email, '@'), 1);
+if (in_array($emailDomain, BLOCKED_DOMAINS, true)) {
     echo json_encode(['success' => false, 'message' => 'Please use your company email address. Personal email IDs are not accepted.']);
     exit;
 }
 
-define('OTP_FILE', __DIR__ . '/pending-otps.json');
-define('OTP_EXPIRY', 600); // 10 minutes (600 seconds)
-
-function load_otps() {
-    if (!file_exists(OTP_FILE)) return [];
-    $raw = file_get_contents(OTP_FILE);
-    return json_decode($raw, true) ?: [];
+try {
+    $db = new PDO('sqlite:' . DB_FILE);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo json_encode(['success' => false, 'message' => 'Database connection failed.']);
+    exit;
 }
 
-function save_otps(array $otps) {
-    file_put_contents(OTP_FILE, json_encode($otps, JSON_PRETTY_PRINT), LOCK_EX);
-}
+$now = time();
 
-$otps = load_otps();
-$now  = time();
-
-// Clean expired OTPs
-$otps = array_filter($otps, function($item) use ($now) {
-    return ($item['expires'] ?? 0) > $now;
-});
+// Delete expired OTPs globally to keep DB clean
+$db->exec("DELETE FROM otps WHERE expires_at < $now");
 
 if ($action === 'send') {
-    // Generate 6-digit numeric OTP
+    // 1. Rate Limiting Check (Max 3 requests per 15 minutes per IP/Email combo)
+    $stmt = $db->prepare("SELECT request_count, last_request_time FROM rate_limits WHERE ip_address = ? AND email = ?");
+    $stmt->execute([$ip, $email]);
+    $rateLimit = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($rateLimit) {
+        if ($now - $rateLimit['last_request_time'] < 900) { // Within 15 minutes
+            if ($rateLimit['request_count'] >= 3) {
+                echo json_encode(['success' => false, 'message' => 'Too many OTP requests. Please wait 15 minutes.']);
+                exit;
+            }
+            $updateStmt = $db->prepare("UPDATE rate_limits SET request_count = request_count + 1, last_request_time = ? WHERE ip_address = ? AND email = ?");
+            $updateStmt->execute([$now, $ip, $email]);
+        } else {
+            // Reset counter after 15 mins
+            $updateStmt = $db->prepare("UPDATE rate_limits SET request_count = 1, last_request_time = ? WHERE ip_address = ? AND email = ?");
+            $updateStmt->execute([$now, $ip, $email]);
+        }
+    } else {
+        $insertStmt = $db->prepare("INSERT INTO rate_limits (ip_address, email, last_request_time, request_count) VALUES (?, ?, ?, 1)");
+        $insertStmt->execute([$ip, $email, $now]);
+    }
+
+    // 2. Generate and Store OTP
     $otpCode = sprintf('%06d', random_int(100000, 999999));
+    $otpHash = password_hash($otpCode, PASSWORD_BCRYPT);
+    $expiresAt = $now + OTP_EXPIRY;
+
+    $stmt = $db->prepare("INSERT INTO otps (email, otp_hash, expires_at, attempts) VALUES (?, ?, ?, 0) 
+                          ON CONFLICT(email) DO UPDATE SET otp_hash=excluded.otp_hash, expires_at=excluded.expires_at, attempts=0");
+    $stmt->execute([$email, $otpHash, $expiresAt]);
     
-    // Store hashed OTP in database
-    $otps[strtolower($email)] = [
-        'otp'      => password_hash($otpCode, PASSWORD_BCRYPT),
-        'expires'  => $now + OTP_EXPIRY,
-        'attempts' => 0,
-        'verified' => false
-    ];
-    save_otps($otps);
-    
-    // Send email
+    // 3. Send email using SmtpClient
     $subject  = 'Your Verification Code — Vedtam Tech Solutions';
     $year     = date('Y');
     $safeName = htmlspecialchars($name, ENT_QUOTES);
@@ -152,13 +160,9 @@ if ($action === 'send') {
 </html>
 HTML;
 
-    $headers  = "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-    $headers .= "From: Vedtam CERT-In Alerts <certin-advisories@vedtam.io>\r\n";
-    $headers .= "Reply-To: certin-advisories@vedtam.io\r\n";
-    
+    $smtp = new SmtpClient();
     ob_end_clean();
-    if (@mail($email, $subject, $body, $headers)) {
+    if ($smtp->sendHtmlEmail($email, $subject, $body)) {
         echo json_encode(['success' => true, 'message' => 'A verification code has been sent to ' . $email]);
     } else {
         echo json_encode(['success' => false, 'message' => 'Could not send verification email. Please try again.']);
@@ -175,36 +179,37 @@ if ($action === 'verify') {
         exit;
     }
     
-    $emailKey = strtolower($email);
-    if (!isset($otps[$emailKey])) {
+    $stmt = $db->prepare("SELECT otp_hash, attempts FROM otps WHERE email = ?");
+    $stmt->execute([$email]);
+    $record = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if (!$record) {
         ob_end_clean();
         echo json_encode(['success' => false, 'message' => 'OTP expired or not found. Please request a new code.']);
         exit;
     }
     
-    $record = $otps[$emailKey];
-    
     // Check limit attempts
-    if (($record['attempts'] ?? 0) >= 3) {
-        unset($otps[$emailKey]);
-        save_otps($otps);
+    if ($record['attempts'] >= 3) {
+        $db->prepare("DELETE FROM otps WHERE email = ?")->execute([$email]);
         ob_end_clean();
         echo json_encode(['success' => false, 'message' => 'Too many failed verification attempts. Please request a new code.']);
         exit;
     }
     
     // Verify OTP hash
-    if (password_verify($userOtp, $record['otp'])) {
-        // Mark as verified
-        $otps[$emailKey]['verified'] = true;
-        $otps[$emailKey]['expires']  = $now + 300; // Extend valid verification for 5 mins to allow form submission
-        save_otps($otps);
+    if (password_verify($userOtp, $record['otp_hash'])) {
+        // Mark as verified (we just use a special hash or update expires_at)
+        // By changing the hash to "VERIFIED", we know it's verified when saving later, 
+        // and we give them 5 mins to submit the final form.
+        $db->prepare("UPDATE otps SET otp_hash = 'VERIFIED', expires_at = ? WHERE email = ?")
+           ->execute([$now + 300, $email]);
         
         ob_end_clean();
         echo json_encode(['success' => true, 'message' => 'Email verified successfully.']);
     } else {
-        $otps[$emailKey]['attempts'] = ($record['attempts'] ?? 0) + 1;
-        save_otps($otps);
+        $db->prepare("UPDATE otps SET attempts = attempts + 1 WHERE email = ?")
+           ->execute([$email]);
         ob_end_clean();
         echo json_encode(['success' => false, 'message' => 'Invalid verification code. Please try again.']);
     }

@@ -25,4 +25,5 @@ def remove_white_bg(img_path, output_path, threshold=235):
         print(f"Error processing image: {e}")
 
 if __name__ == "__main__":
-    remove_white_bg("logo.png", "logo.png")
+    remove_white_bg("vedtam TESTIMONIAL/image.png", "vedtam TESTIMONIAL/image_nobg.png")
+    remove_white_bg("vedtam TESTIMONIAL/nimbuslogo.jpeg", "vedtam TESTIMONIAL/nimbuslogo_nobg.png")

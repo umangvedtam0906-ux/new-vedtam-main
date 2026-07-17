@@ -990,6 +990,19 @@ window.openOtpVerificationModal = function({ email, name, onVerifySuccess, onCan
     }
   }
 
+  // Clean up previous event listeners by cloning elements
+  const newVerifyBtn = verifyBtn.cloneNode(true);
+  verifyBtn.replaceWith(newVerifyBtn);
+  verifyBtn = newVerifyBtn;
+
+  const newResendBtn = resendBtn.cloneNode(true);
+  resendBtn.replaceWith(newResendBtn);
+  resendBtn = newResendBtn;
+
+  const newCloseBtn = closeBtn.cloneNode(true);
+  closeBtn.replaceWith(newCloseBtn);
+  closeBtn = newCloseBtn;
+
   verifyBtn.addEventListener('click', handleVerification);
 
   resendBtn.addEventListener('click', () => {
@@ -1087,8 +1100,9 @@ async function handleCertSubscribeWithToken(form, recaptchaResponse) {
     return;
   }
   const personalDomains = [
-    'gmail.com',
-    'aol.com','rediffmail.com','protonmail.com','proton.me','tutanota.com','gmx.com','gmx.net','mail.com'
+    'aol.com', 'rediffmail.com', 'protonmail.com', 'proton.me', 'tutanota.com', 'gmx.com', 'gmx.net',
+    'mailinator.com', 'guerrillamail.com', '10minutemail.com', 'tempmail.com', 'throwam.com', 'yopmail.com',
+    'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'mail.com'
   ];
   const emailDomain = email.split('@')[1].toLowerCase();
   if (personalDomains.includes(emailDomain)) {

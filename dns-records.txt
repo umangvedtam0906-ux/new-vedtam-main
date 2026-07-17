@@ -1,0 +1,49 @@
+# =========================================================
+# DNS EMAIL RECORDS FOR VEDTAM.IO (Hostinger SMTP)
+# =========================================================
+# The mail-tester results confirmed your DNS is already healthy, 
+# but here is a backup reference of the standard Hostinger 
+# email records for your domain.
+
+# ---------------------------------------------------------
+# 1. SPF (Sender Policy Framework)
+# ---------------------------------------------------------
+# Purpose: Tells the world that Hostinger is allowed to send emails on your behalf.
+# Type: TXT
+# Name/Host: @
+# Value: v=spf1 include:_spf.mail.hostinger.com ~all
+# TTL: Default (or 14400)
+
+
+# ---------------------------------------------------------
+# 2. DKIM (DomainKeys Identified Mail)
+# ---------------------------------------------------------
+# Purpose: Cryptographically signs your emails to prevent tampering and spoofing.
+# Type: CNAME (Usually 2 or 3 records for Hostinger)
+#
+# *Note: DKIM keys are unique to your specific server. You must generate 
+# these inside the Hostinger Email Dashboard -> "DKIM" section if they 
+# are ever lost.*
+#
+# Example (Your actual HostName will vary):
+# Type: CNAME
+# Name/Host: hostingermail-a._domainkey
+# Value: hostingermail-a.dkim.mail.hostinger.com
+#
+# Type: CNAME
+# Name/Host: hostingermail-b._domainkey
+# Value: hostingermail-b.dkim.mail.hostinger.com
+
+
+# ---------------------------------------------------------
+# 3. DMARC (Domain-based Message Authentication)
+# ---------------------------------------------------------
+# Purpose: Tells Gmail/Yahoo what to do if an email FAILS the SPF or DKIM checks.
+# Type: TXT
+# Name/Host: _dmarc
+# Value: v=DMARC1; p=none;
+# TTL: Default (or 14400)
+#
+# (Note: "p=none" means "monitor only, don't block". Once you are confident 
+# no legitimate emails are going to spam, you can change it to "p=quarantine" 
+# or "p=reject" for maximum security).

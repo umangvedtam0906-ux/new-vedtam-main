@@ -6,6 +6,8 @@ import time
 import html
 import csv
 import smtplib
+import sqlite3
+import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import datetime
@@ -47,7 +49,7 @@ ADV_LIST_URL = "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBADVLIST"
 OUTPUT_FILE = os.environ.get("OUTPUT_FILE", "cert-data.json")
 YEAR_FILTER = "" # Removed to fetch all history
 MAX_ENTRIES = 5000 # Increased to hold full history
-SUBSCRIBERS_CSV = os.environ.get("SUBSCRIBERS_CSV", "subscribers.csv")
+DB_FILE = os.environ.get("DB_FILE", "subscribers.db")
 
 
 def clean_html_to_text(html_content):
@@ -297,47 +299,26 @@ def build_entry(url):
         print(f"[cert-updater] Error parsing {url}: {e}")
         return None
 
-def get_confirmed_subscribers(csv_path):
+def get_confirmed_subscribers(db_path):
     subscribers = []
-    if not os.path.exists(csv_path):
-        print(f"[cert-updater] Subscribers file not found: {csv_path}")
+    if not os.path.exists(db_path):
+        print(f"[cert-updater] Subscribers database not found: {db_path}")
         return subscribers
 
     try:
-        with open(csv_path, mode='r', encoding='utf-8') as f:
-            reader = csv.reader(f)
-            try:
-                header = next(reader)
-            except StopIteration:
-                return subscribers # Empty file
-            
-            # Find indices
-            try:
-                name_idx = header.index('name')
-            except ValueError:
-                name_idx = 0
-            
-            try:
-                email_idx = header.index('email')
-            except ValueError:
-                email_idx = 3
-                
-            try:
-                status_idx = header.index('status')
-            except ValueError:
-                status_idx = 4
-                
-            for row in reader:
-                if not row or len(row) <= max(name_idx, email_idx, status_idx):
-                    continue
-                status = row[status_idx].strip().lower()
-                if status == 'confirmed':
-                    subscribers.append({
-                        'name': row[name_idx].strip(),
-                        'email': row[email_idx].strip()
-                    })
+        conn = sqlite3.connect(db_path)
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        cursor.execute("SELECT name, email, token FROM subscribers WHERE status = 'confirmed'")
+        for row in cursor.fetchall():
+            subscribers.append({
+                'name': row['name'],
+                'email': row['email'],
+                'token': row['token'] or ''
+            })
+        conn.close()
     except Exception as e:
-        print(f"[cert-updater] Error reading subscribers CSV: {e}")
+        print(f"[cert-updater] Error reading subscribers database: {e}")
     
     return subscribers
 
@@ -358,13 +339,13 @@ def email_subscribers(new_advisories):
     from_name = os.environ.get("FROM_NAME", "Vedtam CERT-In Alerts")
     site_url = os.environ.get("SITE_URL", "https://vedtam.com")
     site_name = os.environ.get("SITE_NAME", "Vedtam Tech Solutions")
-    csv_path = os.environ.get("SUBSCRIBERS_CSV", SUBSCRIBERS_CSV)
+    db_path = os.environ.get("DB_FILE", DB_FILE)
     
     if not smtp_host or not smtp_user or not smtp_password:
         print("[cert-updater] SMTP host, user, or password not configured. Skipping email sending.")
         return
         
-    subscribers = get_confirmed_subscribers(csv_path)
+    subscribers = get_confirmed_subscribers(db_path)
     if not subscribers:
         print("[cert-updater] No confirmed subscribers found. Skipping email sending.")
         return
@@ -425,6 +406,8 @@ def email_subscribers(new_advisories):
     for sub in subscribers:
         to_email = sub['email']
         to_name = html.escape(sub['name'])
+        token = html.escape(sub.get('token', ''))
+        unsub_link = f"{site_url}/unsubscribe.php?token={token}"
         
         body = f"""<!DOCTYPE html>
 <html lang="en">
@@ -482,7 +465,8 @@ def email_subscribers(new_advisories):
           <td style="background:#0f172a;padding:20px 32px;text-align:center;border-top:1px solid #1e293b;">
             <p style="margin:0;color:#475569;font-size:12px;">
               You are receiving this because you subscribed to CERT-In alerts on {site_name}.<br>
-              &copy; {year} {site_name} &middot; <a href="{site_url}/privacy-policy" style="color:#fb923c;text-decoration:none;">Privacy Policy</a>
+              &copy; {year} {site_name} &middot; <a href="{site_url}/privacy-policy" style="color:#fb923c;text-decoration:none;">Privacy Policy</a><br>
+              <a href="{unsub_link}" style="color:#94a3b8;text-decoration:underline;margin-top:8px;display:inline-block;">Unsubscribe</a>
             </p>
           </td>
         </tr>
@@ -497,9 +481,10 @@ def email_subscribers(new_advisories):
         msg['Subject'] = subject
         msg['From'] = f"{from_name} <{from_email}>"
         msg['To'] = to_email
+        msg['List-Unsubscribe'] = f"<{unsub_link}>"
         
         # Plain text fallback
-        plain_text = f"Hi {sub['name']},\n\nCERT-In has published {total_new} new security {adv_word}. View all advisories at: {site_url}/cert-advisory"
+        plain_text = f"Hi {sub['name']},\n\nCERT-In has published {total_new} new security {adv_word}. View all advisories at: {site_url}/cert-advisory\n\nUnsubscribe: {unsub_link}"
         msg.attach(MIMEText(plain_text, 'plain', 'utf-8'))
         msg.attach(MIMEText(body, 'html', 'utf-8'))
         
