@@ -52,6 +52,31 @@
     "solutionLinks": []
   },
   {
+    "title": "Multiple vulnerabilities in Drupal products",
+    "severity": "high",
+    "date": "2026-07-17",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0366",
+    "code": "CIVN-2026-0366",
+    "summary": "Multiple vulnerabilities have been reported in Drupal plugins, which could allow an attacker to perform cross-site scripting (XSS) attacks, bypass access restrictions, upload malicious files, and execute unauthorized access on the targeted system.",
+    "description": "Drupal is an open-source Content Management System (CMS) which allows individuals and organizations to create, manage and maintain websites and web applications. Multiple vulnerabilities exist in Drupal Core due to improper validation, improper access control, and improper sanitization of user supplied input. Successful exploitation of these vulnerabilities could allow could allow an attacker to perform cross-site scripting (XSS) attacks, bypass access restrictions, upload malicious files, and execute unauthorized access on the targeted system.",
+    "softwareAffected": [
+      "Drupal Canvas AI submodule versions prior to 1.4.2, 1.5.0 to 1.5.1, 1.6.0, and 1.7.1.",
+      "FlowDrop module versions prior to 1.6.0.",
+      "Colorbox module versions prior to 2.1.5 and 2.2.1."
+    ],
+    "targetAudience": "All end-user organizations and individuals using the affected Drupal plugins.",
+    "riskAssessment": "Risk of cross-site scripting attacks, bypass access restrictions, execution malicious file upload, and execute unauthorized access.",
+    "impactAssessment": "Potential for unauthorized access to sensitive information, data theft, malicious file uploads, and full compromise of the affected system.",
+    "cves": [
+      "CVE-2026-58587",
+      "CVE-2026-58588",
+      "CVE-2026-58589",
+      "CVE-2026-58590",
+      "CVE-2026-58591"
+    ],
+    "solutionLinks": []
+  },
+  {
     "title": "Multiple Vulnerabilities in Microsoft Products",
     "severity": "high",
     "date": "2026-07-17",
@@ -81,31 +106,6 @@
       "CVE-2026-56155",
       "CVE-2026-56164",
       "CVE-2026-58644"
-    ],
-    "solutionLinks": []
-  },
-  {
-    "title": "Multiple vulnerabilities in Drupal products",
-    "severity": "high",
-    "date": "2026-07-17",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0366",
-    "code": "CIVN-2026-0366",
-    "summary": "Multiple vulnerabilities have been reported in Drupal plugins, which could allow an attacker to perform cross-site scripting (XSS) attacks, bypass access restrictions, upload malicious files, and execute unauthorized access on the targeted system.",
-    "description": "Drupal is an open-source Content Management System (CMS) which allows individuals and organizations to create, manage and maintain websites and web applications. Multiple vulnerabilities exist in Drupal Core due to improper validation, improper access control, and improper sanitization of user supplied input. Successful exploitation of these vulnerabilities could allow could allow an attacker to perform cross-site scripting (XSS) attacks, bypass access restrictions, upload malicious files, and execute unauthorized access on the targeted system.",
-    "softwareAffected": [
-      "Drupal Canvas AI submodule versions prior to 1.4.2, 1.5.0 to 1.5.1, 1.6.0, and 1.7.1.",
-      "FlowDrop module versions prior to 1.6.0.",
-      "Colorbox module versions prior to 2.1.5 and 2.2.1."
-    ],
-    "targetAudience": "All end-user organizations and individuals using the affected Drupal plugins.",
-    "riskAssessment": "Risk of cross-site scripting attacks, bypass access restrictions, execution malicious file upload, and execute unauthorized access.",
-    "impactAssessment": "Potential for unauthorized access to sensitive information, data theft, malicious file uploads, and full compromise of the affected system.",
-    "cves": [
-      "CVE-2026-58587",
-      "CVE-2026-58588",
-      "CVE-2026-58589",
-      "CVE-2026-58590",
-      "CVE-2026-58591"
     ],
     "solutionLinks": []
   },
