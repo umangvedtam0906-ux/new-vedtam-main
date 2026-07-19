@@ -1,31 +1,5 @@
 [
   {
-    "title": "Multiple Vulnerabilities in GitLab Community Edition (CE) and Enterprise Edition (EE)",
-    "severity": "high",
-    "date": "2026-07-17",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0368",
-    "code": "CIVN-2026-0368",
-    "summary": "Multiple vulnerabilities have been reported in GitLab that could be exploited by an attacker to execute arbitrary scripts, perform Cross-Site Scripting (XSS) attacks, gain unauthorized access to protected resources, and perform unauthorized actions on the targeted system.",
-    "description": "GitLab is a web-based DevOps platform that provides tools for software development, including source code management, continuous integration and continuous deployment. It is available as Community Edition (CE) and Enterprise Edition (EE). Multiple vulnerabilities exist in GitLab due to improper sanitization of user-supplied input, insufficient authorization controls, missing access-control checks and improper handling of Git reference name re",
-    "softwareAffected": [
-      "GitLab Community Edition (CE) and Enterprise Edition (EE) versions prior to 18.11.7, 19.0.4 and 19.1.2"
-    ],
-    "targetAudience": "All organizations and individuals using self-managed GitLab installations.",
-    "riskAssessment": "High risk of cross-site scripting, sensitive information disclosure, credential exposure and unauthorized modification of settings or records.",
-    "impactAssessment": "Potential for sensitive data theft, confidential information disclosure, session compromise through Cross-Site Scripting (XSS), unauthorized modification of settings or records, exposure of stored credentials, repository content manipulation, and loss of data integrity.",
-    "cves": [
-      "CVE-2026-6896",
-      "CVE-2026-13320",
-      "CVE-2026-11827",
-      "CVE-2026-8472",
-      "CVE-2026-7492",
-      "CVE-2025-12506",
-      "CVE-2026-13151",
-      "CVE-2026-6352"
-    ],
-    "solutionLinks": []
-  },
-  {
     "title": "Multiple Vulnerabilities in Drupal",
     "severity": "high",
     "date": "2026-07-17",
@@ -48,31 +22,6 @@
       "CVE-2026-15916",
       "CVE-2026-15917",
       "CVE-2026-55805"
-    ],
-    "solutionLinks": []
-  },
-  {
-    "title": "Multiple vulnerabilities in Drupal products",
-    "severity": "high",
-    "date": "2026-07-17",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0366",
-    "code": "CIVN-2026-0366",
-    "summary": "Multiple vulnerabilities have been reported in Drupal plugins, which could allow an attacker to perform cross-site scripting (XSS) attacks, bypass access restrictions, upload malicious files, and execute unauthorized access on the targeted system.",
-    "description": "Drupal is an open-source Content Management System (CMS) which allows individuals and organizations to create, manage and maintain websites and web applications. Multiple vulnerabilities exist in Drupal Core due to improper validation, improper access control, and improper sanitization of user supplied input. Successful exploitation of these vulnerabilities could allow could allow an attacker to perform cross-site scripting (XSS) attacks, bypass access restrictions, upload malicious files, and execute unauthorized access on the targeted system.",
-    "softwareAffected": [
-      "Drupal Canvas AI submodule versions prior to 1.4.2, 1.5.0 to 1.5.1, 1.6.0, and 1.7.1.",
-      "FlowDrop module versions prior to 1.6.0.",
-      "Colorbox module versions prior to 2.1.5 and 2.2.1."
-    ],
-    "targetAudience": "All end-user organizations and individuals using the affected Drupal plugins.",
-    "riskAssessment": "Risk of cross-site scripting attacks, bypass access restrictions, execution malicious file upload, and execute unauthorized access.",
-    "impactAssessment": "Potential for unauthorized access to sensitive information, data theft, malicious file uploads, and full compromise of the affected system.",
-    "cves": [
-      "CVE-2026-58587",
-      "CVE-2026-58588",
-      "CVE-2026-58589",
-      "CVE-2026-58590",
-      "CVE-2026-58591"
     ],
     "solutionLinks": []
   },
@@ -106,6 +55,57 @@
       "CVE-2026-56155",
       "CVE-2026-56164",
       "CVE-2026-58644"
+    ],
+    "solutionLinks": []
+  },
+  {
+    "title": "Multiple Vulnerabilities in GitLab Community Edition (CE) and Enterprise Edition (EE)",
+    "severity": "high",
+    "date": "2026-07-17",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0368",
+    "code": "CIVN-2026-0368",
+    "summary": "Multiple vulnerabilities have been reported in GitLab that could be exploited by an attacker to execute arbitrary scripts, perform Cross-Site Scripting (XSS) attacks, gain unauthorized access to protected resources, and perform unauthorized actions on the targeted system.",
+    "description": "GitLab is a web-based DevOps platform that provides tools for software development, including source code management, continuous integration and continuous deployment. It is available as Community Edition (CE) and Enterprise Edition (EE). Multiple vulnerabilities exist in GitLab due to improper sanitization of user-supplied input, insufficient authorization controls, missing access-control checks and improper handling of Git reference name re",
+    "softwareAffected": [
+      "GitLab Community Edition (CE) and Enterprise Edition (EE) versions prior to 18.11.7, 19.0.4 and 19.1.2"
+    ],
+    "targetAudience": "All organizations and individuals using self-managed GitLab installations.",
+    "riskAssessment": "High risk of cross-site scripting, sensitive information disclosure, credential exposure and unauthorized modification of settings or records.",
+    "impactAssessment": "Potential for sensitive data theft, confidential information disclosure, session compromise through Cross-Site Scripting (XSS), unauthorized modification of settings or records, exposure of stored credentials, repository content manipulation, and loss of data integrity.",
+    "cves": [
+      "CVE-2026-6896",
+      "CVE-2026-13320",
+      "CVE-2026-11827",
+      "CVE-2026-8472",
+      "CVE-2026-7492",
+      "CVE-2025-12506",
+      "CVE-2026-13151",
+      "CVE-2026-6352"
+    ],
+    "solutionLinks": []
+  },
+  {
+    "title": "Multiple vulnerabilities in Drupal products",
+    "severity": "high",
+    "date": "2026-07-17",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0366",
+    "code": "CIVN-2026-0366",
+    "summary": "Multiple vulnerabilities have been reported in Drupal plugins, which could allow an attacker to perform cross-site scripting (XSS) attacks, bypass access restrictions, upload malicious files, and execute unauthorized access on the targeted system.",
+    "description": "Drupal is an open-source Content Management System (CMS) which allows individuals and organizations to create, manage and maintain websites and web applications. Multiple vulnerabilities exist in Drupal Core due to improper validation, improper access control, and improper sanitization of user supplied input. Successful exploitation of these vulnerabilities could allow could allow an attacker to perform cross-site scripting (XSS) attacks, bypass access restrictions, upload malicious files, and execute unauthorized access on the targeted system.",
+    "softwareAffected": [
+      "Drupal Canvas AI submodule versions prior to 1.4.2, 1.5.0 to 1.5.1, 1.6.0, and 1.7.1.",
+      "FlowDrop module versions prior to 1.6.0.",
+      "Colorbox module versions prior to 2.1.5 and 2.2.1."
+    ],
+    "targetAudience": "All end-user organizations and individuals using the affected Drupal plugins.",
+    "riskAssessment": "Risk of cross-site scripting attacks, bypass access restrictions, execution malicious file upload, and execute unauthorized access.",
+    "impactAssessment": "Potential for unauthorized access to sensitive information, data theft, malicious file uploads, and full compromise of the affected system.",
+    "cves": [
+      "CVE-2026-58587",
+      "CVE-2026-58588",
+      "CVE-2026-58589",
+      "CVE-2026-58590",
+      "CVE-2026-58591"
     ],
     "solutionLinks": []
   },
@@ -202,6 +202,28 @@
     "solutionLinks": []
   },
   {
+    "title": "Multiple Vulnerabilities in Ivanti Sentry",
+    "severity": "critical",
+    "date": "2026-07-13",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0363",
+    "code": "CIVN-2026-0363",
+    "summary": "Multiple vulnerabilities have been reported in Ivanti Sentry, which could allow a remote unauthenticated attacker to execute arbitrary code with root privileges, bypass authentication, create arbitrary administrative accounts, and gain full administrative access on the targeted system.",
+    "description": "Ivanti Sentry, formerly known as MobileIron Sentry, is an in-line gateway that manages, encrypts, and secures traffic between mobile devices and backend enterprise systems. Multiple critical vulnerabilities have been reported in Ivanti Sentry due to improper neutralization of special elements used in an operating system command and authentication bypass using an alternate path or channel. Successful exploitation of these vulnerabilities could allow a remote unauthenticated attacker to execute arbitrary code with root privileges, bypass authentication, create arbitrary administrative accounts, and gain full administrative access on the targeted system. Note: CVE-2026-10520 is being actively exploited in the wild.",
+    "softwareAffected": [
+      "Ivanti Sentry 10.5.x versions prior to 10.5.2",
+      "Ivanti Sentry 10.6.x versions prior to 10.6.2",
+      "Ivanti Sentry 10.7.x versions prior to 10.7.1"
+    ],
+    "targetAudience": "IT administrators, security administrators, network administrators, and organizations using Ivanti Sentry.",
+    "riskAssessment": "Critical risk of complete system compromise, unauthorized administrative access, and execution of arbitrary commands.",
+    "impactAssessment": "Potential for complete system compromise, unauthorized administrative access, and arbitrary code execution with root privileges.",
+    "cves": [
+      "CVE-2026-10520",
+      "CVE-2026-10523"
+    ],
+    "solutionLinks": []
+  },
+  {
     "title": "CERT-In Advisory CICA-2026-3536",
     "severity": "high",
     "date": "2026-07-13",
@@ -254,58 +276,6 @@
     "solutionLinks": []
   },
   {
-    "title": "Multiple Vulnerabilities in Ivanti Sentry",
-    "severity": "critical",
-    "date": "2026-07-13",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0363",
-    "code": "CIVN-2026-0363",
-    "summary": "Multiple vulnerabilities have been reported in Ivanti Sentry, which could allow a remote unauthenticated attacker to execute arbitrary code with root privileges, bypass authentication, create arbitrary administrative accounts, and gain full administrative access on the targeted system.",
-    "description": "Ivanti Sentry, formerly known as MobileIron Sentry, is an in-line gateway that manages, encrypts, and secures traffic between mobile devices and backend enterprise systems. Multiple critical vulnerabilities have been reported in Ivanti Sentry due to improper neutralization of special elements used in an operating system command and authentication bypass using an alternate path or channel. Successful exploitation of these vulnerabilities could allow a remote unauthenticated attacker to execute arbitrary code with root privileges, bypass authentication, create arbitrary administrative accounts, and gain full administrative access on the targeted system. Note: CVE-2026-10520 is being actively exploited in the wild.",
-    "softwareAffected": [
-      "Ivanti Sentry 10.5.x versions prior to 10.5.2",
-      "Ivanti Sentry 10.6.x versions prior to 10.6.2",
-      "Ivanti Sentry 10.7.x versions prior to 10.7.1"
-    ],
-    "targetAudience": "IT administrators, security administrators, network administrators, and organizations using Ivanti Sentry.",
-    "riskAssessment": "Critical risk of complete system compromise, unauthorized administrative access, and execution of arbitrary commands.",
-    "impactAssessment": "Potential for complete system compromise, unauthorized administrative access, and arbitrary code execution with root privileges.",
-    "cves": [
-      "CVE-2026-10520",
-      "CVE-2026-10523"
-    ],
-    "solutionLinks": []
-  },
-  {
-    "title": "Multiple Vulnerabilities in Wireshark",
-    "severity": "high",
-    "date": "2026-07-10",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0361",
-    "code": "CIVN-2026-0361",
-    "summary": "Multiple vulnerabilities have been reported in Wireshark that could allow an attacker to obtain sensitive information or cause denial of service (DoS) condition on the targeted system.",
-    "description": "Wireshark is a network protocol analyzer used to capture and inspect data packets in real time for troubleshooting, analysis, and security purposes. Multiple vulnerabilities have been reported in Wireshark due to improper input validation. An attacker could exploit these vulnerabilities by sending a specially crafted request. Successful exploitation of these vulnerabilities could allow an attacker to obtain sensitive information or trigger denial of service (DoS) condition on the targeted system.",
-    "softwareAffected": [
-      "Wireshark versions 4.6.0 to 4.6.6, 4.4.0 to 4.4.16."
-    ],
-    "targetAudience": "All end-users organisations and individual using Wireshark.",
-    "riskAssessment": "High risk of service unavailability.",
-    "impactAssessment": "Potential for sensitive data exposure, disruption of services.",
-    "cves": [
-      "CVE-2026-15164",
-      "CVE-2026-15167",
-      "CVE-2026-15163",
-      "CVE-2026-15168",
-      "CVE-2026-15169",
-      "CVE-2026-15170",
-      "CVE-2026-15166",
-      "CVE-2026-15165",
-      "CVE-2026-15171",
-      "CVE-2026-15172",
-      "CVE-2026-15173",
-      "CVE-2026-15174"
-    ],
-    "solutionLinks": []
-  },
-  {
     "title": "Multiple Vulnerabilities in PAN-OS",
     "severity": "high",
     "date": "2026-07-10",
@@ -341,6 +311,36 @@
       "CVE-2026-0286",
       "CVE-2026-0287",
       "CVE-2026-0288"
+    ],
+    "solutionLinks": []
+  },
+  {
+    "title": "Multiple Vulnerabilities in Wireshark",
+    "severity": "high",
+    "date": "2026-07-10",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0361",
+    "code": "CIVN-2026-0361",
+    "summary": "Multiple vulnerabilities have been reported in Wireshark that could allow an attacker to obtain sensitive information or cause denial of service (DoS) condition on the targeted system.",
+    "description": "Wireshark is a network protocol analyzer used to capture and inspect data packets in real time for troubleshooting, analysis, and security purposes. Multiple vulnerabilities have been reported in Wireshark due to improper input validation. An attacker could exploit these vulnerabilities by sending a specially crafted request. Successful exploitation of these vulnerabilities could allow an attacker to obtain sensitive information or trigger denial of service (DoS) condition on the targeted system.",
+    "softwareAffected": [
+      "Wireshark versions 4.6.0 to 4.6.6, 4.4.0 to 4.4.16."
+    ],
+    "targetAudience": "All end-users organisations and individual using Wireshark.",
+    "riskAssessment": "High risk of service unavailability.",
+    "impactAssessment": "Potential for sensitive data exposure, disruption of services.",
+    "cves": [
+      "CVE-2026-15164",
+      "CVE-2026-15167",
+      "CVE-2026-15163",
+      "CVE-2026-15168",
+      "CVE-2026-15169",
+      "CVE-2026-15170",
+      "CVE-2026-15166",
+      "CVE-2026-15165",
+      "CVE-2026-15171",
+      "CVE-2026-15172",
+      "CVE-2026-15173",
+      "CVE-2026-15174"
     ],
     "solutionLinks": []
   },
@@ -494,6 +494,29 @@
     "solutionLinks": []
   },
   {
+    "title": "Multiple Vulnerabilities in RedHat JBoss Enterprise Application",
+    "severity": "critical",
+    "date": "2026-07-03",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0353",
+    "code": "CIVN-2026-0353",
+    "summary": "Multiple vulnerabilities have been reported in Red Hat JBoss Enterprise Application Platform which could allow a remote attacker to cause denial-of-service (DoS), perform server-side request forgery (SSRF), poison web caches, or potentially expose sensitive information on the targeted system.",
+    "description": "Red Hat JBoss is a Java-based server that provides a secure, scalable, and high-performance environment for developing, deploying, and managing enterprise applications. These vulnerabilities exist in Red Hat JBoss Enterprise Application due to improper validation of HTTP Host headers, insufficient handling of malformed HTTP/2 requests, insecure processing of temporary files, and improper handling of malicious JSON Web Encryption (JWE) tokens. A remote attacker could exploit these weaknesses by sending specially crafted requests or malicious input. Successful exploitation of these vulnerabilities could allow an attacker to cause denial-of-service (DoS), perform server-side request forgery (SSRF), poison web caches, or potentially expose sensitive information on the targeted system.",
+    "softwareAffected": [
+      "Red Hat JBoss Enterprise Application Platform 7.3 EUS 7.3 x86_64",
+      "Red Hat JBoss Enterprise Application Platform 7.1 EUS 7.1 x86_64"
+    ],
+    "targetAudience": "Large scale enterprises and organizations using Red Hat JBoss Products.",
+    "riskAssessment": "High risk of service disruption, unauthorized access to internal resources, cache manipulation, and potential exposure of sensitive information.",
+    "impactAssessment": "Potential for sensitive data exposure, unauthorized access to internal resources, cache poisoning, and disruption of service.",
+    "cves": [
+      "CVE-2025-9784",
+      "CVE-2025-12543",
+      "CVE-2025-23184",
+      "CVE-2024-29371"
+    ],
+    "solutionLinks": []
+  },
+  {
     "title": "Multiple Vulnerabilities in Citrix NetScaler ADC and NetScaler Gateway",
     "severity": "high",
     "date": "2026-07-03",
@@ -521,25 +544,21 @@
     "solutionLinks": []
   },
   {
-    "title": "Multiple Vulnerabilities in RedHat JBoss Enterprise Application",
+    "title": "Vulnerability in the Oracle Payments product of Oracle E-Business Suite",
     "severity": "critical",
-    "date": "2026-07-03",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0353",
-    "code": "CIVN-2026-0353",
-    "summary": "Multiple vulnerabilities have been reported in Red Hat JBoss Enterprise Application Platform which could allow a remote attacker to cause denial-of-service (DoS), perform server-side request forgery (SSRF), poison web caches, or potentially expose sensitive information on the targeted system.",
-    "description": "Red Hat JBoss is a Java-based server that provides a secure, scalable, and high-performance environment for developing, deploying, and managing enterprise applications. These vulnerabilities exist in Red Hat JBoss Enterprise Application due to improper validation of HTTP Host headers, insufficient handling of malformed HTTP/2 requests, insecure processing of temporary files, and improper handling of malicious JSON Web Encryption (JWE) tokens. A remote attacker could exploit these weaknesses by sending specially crafted requests or malicious input. Successful exploitation of these vulnerabilities could allow an attacker to cause denial-of-service (DoS), perform server-side request forgery (SSRF), poison web caches, or potentially expose sensitive information on the targeted system.",
+    "date": "2026-07-02",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0352",
+    "code": "CIVN-2026-0352",
+    "summary": "A vulnerability has been reported in Oracle E-Business Suite, which may allow an unauthenticated attacker with network access via HTTP to compromise the Oracle Payments component on the targeted system.",
+    "description": "Oracle E-Business Suite (EBS) is an integrated set of enterprise applications designed to help organisations automate and manage core business functions such as finance, human resources, supply chain, and more. It supports global operations and can be deployed on-premises or in the cloud. This vulnerability exists in Oracle Payments product of Oracle E-Business Suite due to security flaw in the File Transmission component. Successful exploitation of this vulnerability could allow an unauthenticated attacker with network access via HTTP to compromise the Oracle Payments component on the targeted system.",
     "softwareAffected": [
-      "Red Hat JBoss Enterprise Application Platform 7.3 EUS 7.3 x86_64",
-      "Red Hat JBoss Enterprise Application Platform 7.1 EUS 7.1 x86_64"
+      "Oracle E-Business Suite versions 12.2.3-12.2.15."
     ],
-    "targetAudience": "Large scale enterprises and organizations using Red Hat JBoss Products.",
-    "riskAssessment": "High risk of service disruption, unauthorized access to internal resources, cache manipulation, and potential exposure of sensitive information.",
-    "impactAssessment": "Potential for sensitive data exposure, unauthorized access to internal resources, cache poisoning, and disruption of service.",
+    "targetAudience": "All end-user organizations and individuals using affected Oracle E-Business Suite.",
+    "riskAssessment": "High risk of unauthorized access and disruption of business operations.",
+    "impactAssessment": "Potential for complete system takeover, unauthorized access to sensitive information, and disruption of services.",
     "cves": [
-      "CVE-2025-9784",
-      "CVE-2025-12543",
-      "CVE-2025-23184",
-      "CVE-2024-29371"
+      "CVE-2026-46817"
     ],
     "solutionLinks": []
   },
@@ -562,25 +581,6 @@
       "CVE-2026-13281",
       "CVE-2026-13282",
       "CVE-2026-13283"
-    ],
-    "solutionLinks": []
-  },
-  {
-    "title": "Vulnerability in the Oracle Payments product of Oracle E-Business Suite",
-    "severity": "critical",
-    "date": "2026-07-02",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0352",
-    "code": "CIVN-2026-0352",
-    "summary": "A vulnerability has been reported in Oracle E-Business Suite, which may allow an unauthenticated attacker with network access via HTTP to compromise the Oracle Payments component on the targeted system.",
-    "description": "Oracle E-Business Suite (EBS) is an integrated set of enterprise applications designed to help organisations automate and manage core business functions such as finance, human resources, supply chain, and more. It supports global operations and can be deployed on-premises or in the cloud. This vulnerability exists in Oracle Payments product of Oracle E-Business Suite due to security flaw in the File Transmission component. Successful exploitation of this vulnerability could allow an unauthenticated attacker with network access via HTTP to compromise the Oracle Payments component on the targeted system.",
-    "softwareAffected": [
-      "Oracle E-Business Suite versions 12.2.3-12.2.15."
-    ],
-    "targetAudience": "All end-user organizations and individuals using affected Oracle E-Business Suite.",
-    "riskAssessment": "High risk of unauthorized access and disruption of business operations.",
-    "impactAssessment": "Potential for complete system takeover, unauthorized access to sensitive information, and disruption of services.",
-    "cves": [
-      "CVE-2026-46817"
     ],
     "solutionLinks": []
   },
@@ -623,6 +623,25 @@
     "solutionLinks": []
   },
   {
+    "title": "PHP Object Injection vulnerability in Tealium iQ Tag Management module for Drupal",
+    "severity": "critical",
+    "date": "2026-06-30",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0349",
+    "code": "CIVN-2026-0349",
+    "summary": "A critical vulnerability has been reported in the Drupal Tealium iQ Tag Management module that could allow an attacker to perform PHP Object Injection, potentially resulting in arbitrary PHP code execution on the affected system.",
+    "description": "Drupal is an open-source Content Management System (CMS) which allows individuals and organizations to create, manage and maintain websites and web applications. A vulnerability exists in the Drupal Tealium iQ Tag Management module due to insufficient validation of user-supplied serialized data before it is passed to PHPs unserialize() function. An attacker with permission to edit a content entity containing an attached tealiumiq field could exploit this vulnerability by injecting specially crafted serialized objects, leading to PHP Object Injection. Successful exploitation of this vulnerability could allow an attacker to perform PHP Object Injection, potentially resulting in arbitrary PHP code execution on the affected system.",
+    "softwareAffected": [
+      "Drupal Tealium iQ Tag Management module versions prior to 2.4.0."
+    ],
+    "targetAudience": "All end-user organizations and individuals using affected Drupal module.",
+    "riskAssessment": "High risk of arbitrary code execution, unauthorized access and modification, and full system compromise.",
+    "impactAssessment": "Potential for data exposure and theft, unauthorized access, and disruption of services.",
+    "cves": [
+      "CVE-2026-13244"
+    ],
+    "solutionLinks": []
+  },
+  {
     "title": "Multiple vulnerabilities in Apple Products",
     "severity": "critical",
     "date": "2026-06-30",
@@ -640,25 +659,6 @@
     "riskAssessment": "High risk of sensitive information disclosure, privilege escalation, disruption of services.",
     "impactAssessment": "Potential for full system compromise, remote code execution, service unavailability.",
     "cves": [],
-    "solutionLinks": []
-  },
-  {
-    "title": "PHP Object Injection vulnerability in Tealium iQ Tag Management module for Drupal",
-    "severity": "critical",
-    "date": "2026-06-30",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0349",
-    "code": "CIVN-2026-0349",
-    "summary": "A critical vulnerability has been reported in the Drupal Tealium iQ Tag Management module that could allow an attacker to perform PHP Object Injection, potentially resulting in arbitrary PHP code execution on the affected system.",
-    "description": "Drupal is an open-source Content Management System (CMS) which allows individuals and organizations to create, manage and maintain websites and web applications. A vulnerability exists in the Drupal Tealium iQ Tag Management module due to insufficient validation of user-supplied serialized data before it is passed to PHPs unserialize() function. An attacker with permission to edit a content entity containing an attached tealiumiq field could exploit this vulnerability by injecting specially crafted serialized objects, leading to PHP Object Injection. Successful exploitation of this vulnerability could allow an attacker to perform PHP Object Injection, potentially resulting in arbitrary PHP code execution on the affected system.",
-    "softwareAffected": [
-      "Drupal Tealium iQ Tag Management module versions prior to 2.4.0."
-    ],
-    "targetAudience": "All end-user organizations and individuals using affected Drupal module.",
-    "riskAssessment": "High risk of arbitrary code execution, unauthorized access and modification, and full system compromise.",
-    "impactAssessment": "Potential for data exposure and theft, unauthorized access, and disruption of services.",
-    "cves": [
-      "CVE-2026-13244"
-    ],
     "solutionLinks": []
   },
   {
@@ -1496,21 +1496,6 @@
     "code": "CIVN-2026-0320"
   },
   {
-    "title": "CERT-In Advisory CICA-2026-3531",
-    "severity": "high",
-    "date": "2026-06-18",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBADV01&CACODE=CICA-2026-3531",
-    "code": "CICA-2026-3531",
-    "summary": "Multiple vulnerabilities reported.",
-    "description": "",
-    "softwareAffected": "",
-    "targetAudience": "",
-    "riskAssessment": "",
-    "impactAssessment": "",
-    "cves": [],
-    "solutionLinks": []
-  },
-  {
     "title": "Multiple Vulnerabilities in Oracle Products",
     "severity": "critical",
     "date": "2026-06-18",
@@ -1535,6 +1520,21 @@
     "targetAudience": "Individuals and organisational users of the above-mentioned Oracle products.",
     "riskAssessment": "High risk of arbitrary code execution, unauthorized access, denial of service, data manipulation, information disclosure and privilege escalation.",
     "impactAssessment": "Potential for unauthorized access to sensitive information, denial of service, data manipulation, privilege escalation and full system compromise.",
+    "cves": [],
+    "solutionLinks": []
+  },
+  {
+    "title": "CERT-In Advisory CICA-2026-3531",
+    "severity": "high",
+    "date": "2026-06-18",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBADV01&CACODE=CICA-2026-3531",
+    "code": "CICA-2026-3531",
+    "summary": "Multiple vulnerabilities reported.",
+    "description": "",
+    "softwareAffected": "",
+    "targetAudience": "",
+    "riskAssessment": "",
+    "impactAssessment": "",
     "cves": [],
     "solutionLinks": []
   },
