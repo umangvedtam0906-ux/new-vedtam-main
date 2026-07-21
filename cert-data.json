@@ -24,32 +24,6 @@
     "solutionLinks": []
   },
   {
-    "title": "Multiple Vulnerabilities in GitLab Community Edition (CE) and Enterprise Edition (EE)",
-    "severity": "high",
-    "date": "2026-07-17",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0368",
-    "code": "CIVN-2026-0368",
-    "summary": "Multiple vulnerabilities have been reported in GitLab that could be exploited by an attacker to execute arbitrary scripts, perform Cross-Site Scripting (XSS) attacks, gain unauthorized access to protected resources, and perform unauthorized actions on the targeted system.",
-    "description": "GitLab is a web-based DevOps platform that provides tools for software development, including source code management, continuous integration and continuous deployment. It is available as Community Edition (CE) and Enterprise Edition (EE). Multiple vulnerabilities exist in GitLab due to improper sanitization of user-supplied input, insufficient authorization controls, missing access-control checks and improper handling of Git reference name re",
-    "softwareAffected": [
-      "GitLab Community Edition (CE) and Enterprise Edition (EE) versions prior to 18.11.7, 19.0.4 and 19.1.2"
-    ],
-    "targetAudience": "All organizations and individuals using self-managed GitLab installations.",
-    "riskAssessment": "High risk of cross-site scripting, sensitive information disclosure, credential exposure and unauthorized modification of settings or records.",
-    "impactAssessment": "Potential for sensitive data theft, confidential information disclosure, session compromise through Cross-Site Scripting (XSS), unauthorized modification of settings or records, exposure of stored credentials, repository content manipulation, and loss of data integrity.",
-    "cves": [
-      "CVE-2026-6896",
-      "CVE-2026-13320",
-      "CVE-2026-11827",
-      "CVE-2026-8472",
-      "CVE-2026-7492",
-      "CVE-2025-12506",
-      "CVE-2026-13151",
-      "CVE-2026-6352"
-    ],
-    "solutionLinks": []
-  },
-  {
     "title": "Multiple Vulnerabilities in Drupal",
     "severity": "high",
     "date": "2026-07-17",
@@ -72,6 +46,32 @@
       "CVE-2026-15916",
       "CVE-2026-15917",
       "CVE-2026-55805"
+    ],
+    "solutionLinks": []
+  },
+  {
+    "title": "Multiple Vulnerabilities in GitLab Community Edition (CE) and Enterprise Edition (EE)",
+    "severity": "high",
+    "date": "2026-07-17",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0368",
+    "code": "CIVN-2026-0368",
+    "summary": "Multiple vulnerabilities have been reported in GitLab that could be exploited by an attacker to execute arbitrary scripts, perform Cross-Site Scripting (XSS) attacks, gain unauthorized access to protected resources, and perform unauthorized actions on the targeted system.",
+    "description": "GitLab is a web-based DevOps platform that provides tools for software development, including source code management, continuous integration and continuous deployment. It is available as Community Edition (CE) and Enterprise Edition (EE). Multiple vulnerabilities exist in GitLab due to improper sanitization of user-supplied input, insufficient authorization controls, missing access-control checks and improper handling of Git reference name re",
+    "softwareAffected": [
+      "GitLab Community Edition (CE) and Enterprise Edition (EE) versions prior to 18.11.7, 19.0.4 and 19.1.2"
+    ],
+    "targetAudience": "All organizations and individuals using self-managed GitLab installations.",
+    "riskAssessment": "High risk of cross-site scripting, sensitive information disclosure, credential exposure and unauthorized modification of settings or records.",
+    "impactAssessment": "Potential for sensitive data theft, confidential information disclosure, session compromise through Cross-Site Scripting (XSS), unauthorized modification of settings or records, exposure of stored credentials, repository content manipulation, and loss of data integrity.",
+    "cves": [
+      "CVE-2026-6896",
+      "CVE-2026-13320",
+      "CVE-2026-11827",
+      "CVE-2026-8472",
+      "CVE-2026-7492",
+      "CVE-2025-12506",
+      "CVE-2026-13151",
+      "CVE-2026-6352"
     ],
     "solutionLinks": []
   },
@@ -300,6 +300,52 @@
     "solutionLinks": []
   },
   {
+    "title": "Multiple vulnerabilities in Google Chrome for Desktop",
+    "severity": "critical",
+    "date": "2026-07-10",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0359",
+    "code": "CIVN-2026-0359",
+    "summary": "Multiple vulnerabilities have been reported in Google Chrome which could allow a remote attacker to execute arbitrary code, bypass security restrictions, disclose sensitive information and cause denial of service (DoS) condition on the targeted system.",
+    "description": "Google Chrome is a popular internet browser that is used for accessing the information available on worldwide web. It is designed for use on desktop computers, such as those running on Windows, macOS or Linux operating system. Multiple vulnerabilities exist in Google Chrome due to Use after free in Ozone, Views, InterestGroups, Extensions, Autofill, Actor, Payments, Input, Core, WebRTC, Forms and IndexedDB; Uninitialized use in V8 and ANGLE; Integer overflow in Extensions API; Out-of-bounds read and write in Codecs; Insufficient input validation of WebAppInstalls and Codecs; Insufficient data validation in DOM and Navigation; Insufficient policy enforcement in Passwords and Navigation; and Inappropriate implementation in GetUserMedia, Forms and WebGL. A remote attacker could exploit these vulnerabilities by persuading a victim to visit a specially crafted web page. Successful exploitation of these vulnerabilities could allow remote attacker to execute arbitrary code, bypass security restrictions, disclose sensitive information and cause denial of service (DoS) condition on the targeted system.",
+    "softwareAffected": [
+      "Google Chrome versions prior to 150.0.7871.114/.115 for Windows and Mac",
+      "Google Chrome versions prior to 150.0.7871.114 for Linux"
+    ],
+    "targetAudience": "All end-user organizations and individuals using Google Chrome for Desktop.",
+    "riskAssessment": "High risk of security policy bypass, data loss and service disruptions.",
+    "impactAssessment": "Potential for full system compromise, service unavailability and information disclosure.",
+    "cves": [
+      "CVE-2026-15107",
+      "CVE-2026-15108",
+      "CVE-2026-15109",
+      "CVE-2026-15110",
+      "CVE-2026-15111",
+      "CVE-2026-15112",
+      "CVE-2026-15113",
+      "CVE-2026-15114",
+      "CVE-2026-15115",
+      "CVE-2026-15116",
+      "CVE-2026-15117",
+      "CVE-2026-15118",
+      "CVE-2026-15119",
+      "CVE-2026-15120",
+      "CVE-2026-15121",
+      "CVE-2026-15122",
+      "CVE-2026-15123",
+      "CVE-2026-15124",
+      "CVE-2026-15125",
+      "CVE-2026-15126",
+      "CVE-2026-15127",
+      "CVE-2026-15128",
+      "CVE-2026-15129",
+      "CVE-2026-15130",
+      "CVE-2026-15131",
+      "CVE-2026-15132",
+      "CVE-2026-15133"
+    ],
+    "solutionLinks": []
+  },
+  {
     "title": "Multiple Vulnerabilities in Wireshark",
     "severity": "high",
     "date": "2026-07-10",
@@ -365,52 +411,6 @@
       "CVE-2026-0286",
       "CVE-2026-0287",
       "CVE-2026-0288"
-    ],
-    "solutionLinks": []
-  },
-  {
-    "title": "Multiple vulnerabilities in Google Chrome for Desktop",
-    "severity": "critical",
-    "date": "2026-07-10",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0359",
-    "code": "CIVN-2026-0359",
-    "summary": "Multiple vulnerabilities have been reported in Google Chrome which could allow a remote attacker to execute arbitrary code, bypass security restrictions, disclose sensitive information and cause denial of service (DoS) condition on the targeted system.",
-    "description": "Google Chrome is a popular internet browser that is used for accessing the information available on worldwide web. It is designed for use on desktop computers, such as those running on Windows, macOS or Linux operating system. Multiple vulnerabilities exist in Google Chrome due to Use after free in Ozone, Views, InterestGroups, Extensions, Autofill, Actor, Payments, Input, Core, WebRTC, Forms and IndexedDB; Uninitialized use in V8 and ANGLE; Integer overflow in Extensions API; Out-of-bounds read and write in Codecs; Insufficient input validation of WebAppInstalls and Codecs; Insufficient data validation in DOM and Navigation; Insufficient policy enforcement in Passwords and Navigation; and Inappropriate implementation in GetUserMedia, Forms and WebGL. A remote attacker could exploit these vulnerabilities by persuading a victim to visit a specially crafted web page. Successful exploitation of these vulnerabilities could allow remote attacker to execute arbitrary code, bypass security restrictions, disclose sensitive information and cause denial of service (DoS) condition on the targeted system.",
-    "softwareAffected": [
-      "Google Chrome versions prior to 150.0.7871.114/.115 for Windows and Mac",
-      "Google Chrome versions prior to 150.0.7871.114 for Linux"
-    ],
-    "targetAudience": "All end-user organizations and individuals using Google Chrome for Desktop.",
-    "riskAssessment": "High risk of security policy bypass, data loss and service disruptions.",
-    "impactAssessment": "Potential for full system compromise, service unavailability and information disclosure.",
-    "cves": [
-      "CVE-2026-15107",
-      "CVE-2026-15108",
-      "CVE-2026-15109",
-      "CVE-2026-15110",
-      "CVE-2026-15111",
-      "CVE-2026-15112",
-      "CVE-2026-15113",
-      "CVE-2026-15114",
-      "CVE-2026-15115",
-      "CVE-2026-15116",
-      "CVE-2026-15117",
-      "CVE-2026-15118",
-      "CVE-2026-15119",
-      "CVE-2026-15120",
-      "CVE-2026-15121",
-      "CVE-2026-15122",
-      "CVE-2026-15123",
-      "CVE-2026-15124",
-      "CVE-2026-15125",
-      "CVE-2026-15126",
-      "CVE-2026-15127",
-      "CVE-2026-15128",
-      "CVE-2026-15129",
-      "CVE-2026-15130",
-      "CVE-2026-15131",
-      "CVE-2026-15132",
-      "CVE-2026-15133"
     ],
     "solutionLinks": []
   },
