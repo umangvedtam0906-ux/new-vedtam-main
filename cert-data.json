@@ -1,5 +1,76 @@
 [
   {
+    "title": "Multiple Vulnerabilities in WordPress",
+    "severity": "critical",
+    "date": "2026-07-21",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0373",
+    "code": "CIVN-2026-0373",
+    "summary": "Multiple vulnerabilities have been reported in WordPress, which could allow an attacker to perform SQL injection attack, or execute arbitrary code on the targeted system.",
+    "description": "WordPress is an open-source content management system (CMS) used to build websites and blogs. Multiple vulnerabilities exist in WordPress due to a REST API batch endpoint route interpretation conflict (route confusion) and improper sanitization of the author__not_in parameter in WP_Query. Successful exploitation of these vulnerabilities could allow an attacker to perform SQL injection attack, or execute arbitrary code on the targeted system.",
+    "softwareAffected": [
+      "WordPress versions prior to 7.0.2"
+    ],
+    "targetAudience": "Users of affected WordPress versions.",
+    "riskAssessment": "Risk of SQL injection attacks and remote code execution (RCE).",
+    "impactAssessment": "Potential for unauthorized access, execution of arbitrary code, privilege escalation, and full compromise.",
+    "cves": [
+      "CVE-2026-60137",
+      "CVE-2026-63030"
+    ],
+    "solutionLinks": []
+  },
+  {
+    "title": "Multiple Vulnerabilities in TP-Link Products",
+    "severity": "high",
+    "date": "2026-07-21",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0372",
+    "code": "CIVN-2026-0372",
+    "summary": "Multiple vulnerabilities have been reported in TP-Link products, which could allow an attacker on the same local network to disclose sensitive information, intercept encrypted communications through a Man-in-the-Middle (MITM) attack, expose geolocation information, and compromise the confidentiality of the affected devices.",
+    "description": "TP-Link Kasa EC70 and EC71 are smart security cameras that provide remote monitoring and surveillance capabilities for residential and enterprise environments. These vulnerabilities exist in TP-Link products due to the use of a hard-coded cryptographic private key within the firmware and exposure of sensitive geolocation information through the local discovery mechanism. Successful exploitation of these vulnerabilities could allow an attacker to disclose sensitive information, intercept encrypted communications through a Man-in-the-Middle (MITM) attack, expose geolocation information, and compromise the confidentiality of the affected devices.",
+    "softwareAffected": [
+      "TP-Link Kasa EC70 V4 firmware versions prior to 2.4.0 Build 20260520 rel. 4191",
+      "TP-Link Kasa EC71 V4 firmware versions prior to 2.4.0 Build 20260520 rel. 4191",
+      "TP-Link Kasa EC70 V4 firmware versions prior to 2.4.1 Build 20260621 rel. 76536",
+      "TP-Link Kasa EC71 V4 firmware versions prior to 2.4.1 Build 20260621 rel. 76536"
+    ],
+    "targetAudience": "All organizations and individuals using the affected TP-Link products.",
+    "riskAssessment": "High risk of sensitive information disclosure, compromise of encrypted communications through Man-in-the-Middle (MITM) attacks, and exposure of geolocation information.",
+    "impactAssessment": "Potential for disclosure of sensitive information, interception of encrypted communications, exposure of geolocation information, and compromise of the confidentiality of affected devices.",
+    "cves": [
+      "CVE-2026-9770",
+      "CVE-2026-13230"
+    ],
+    "solutionLinks": []
+  },
+  {
+    "title": "Multiple Vulnerabilities in VMware Avi Load Balancer",
+    "severity": "critical",
+    "date": "2026-07-21",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0370",
+    "code": "CIVN-2026-0370",
+    "summary": "Multiple vulnerabilities have been reported in VMware Avi Load Balancer, which could allow an attacker to gain unauthorised access, escalate privileges, execute arbitrary code, and gain access to sensitive information on the targeted system.",
+    "description": "VMware Avi Load Balancer is a software-defined, multi-cloud application delivery controller that provides elastic load balancing, application security (WAF), and observability for containerized, virtualised, and bare-metal workloads. Multiple vulnerabilities exist in VMware Avi Load Balancer due to improper authentication, insufficient input validation, improper privilege management and file path validation issues. An attacker may exploit these vulnerabilities by sending specially crafted requests. Successful exploitation of these vulnerabilities could allow an attacker to gain unauthorised access, escalate privileges, execute arbitrary code, and gain access to sensitive information on the targeted system.",
+    "softwareAffected": [
+      "VMware Avi Load Balancer version 31.1.1 - 31.2.2",
+      "VMware Avi Load Balancer version 30.1.1 - 30.2.6",
+      "VMware Avi Load Balancer version 22.1.1 - 22.1.7",
+      "VMware Avi Load Balancer version 32.1.1"
+    ],
+    "targetAudience": "Enterprises and large organisations, cloud service providers and industries with IT environments utilizing VMware Avi Load Balancer.",
+    "riskAssessment": "Risk of full system compromise, sensitive information disclosure and lateral movement.",
+    "impactAssessment": "Potential for local privilege escalation, disclosure of sensitive information and unauthorised access.",
+    "cves": [
+      "CVE-2026-47865",
+      "CVE-2026-47866",
+      "CVE-2026-47867",
+      "CVE-2026-47868",
+      "CVE-2026-47869",
+      "CVE-2026-47870",
+      "CVE-2026-47871"
+    ],
+    "solutionLinks": []
+  },
+  {
     "title": "Multiple Vulnerabilities in Apache Tomcat",
     "severity": "critical",
     "date": "2026-07-20",
@@ -20,6 +91,39 @@
     "cves": [
       "CVE-2026-59083",
       "CVE-2026-59084"
+    ],
+    "solutionLinks": []
+  },
+  {
+    "title": "Multiple Vulnerabilities in Microsoft Products",
+    "severity": "high",
+    "date": "2026-07-17",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES02&VLCODE=CIAD-2026-0035",
+    "code": "CIAD-2026-0035",
+    "summary": "Multiple vulnerabilities have been reported in Microsoft products that could allow an attacker to gain elevated privileges, obtain sensitive information, execute arbitrary code remotely, bypass security restrictions, conduct spoofing attacks, perform tampering of data or system processes, or cause denial-of-service (DoS) conditions.",
+    "description": "Multiple vulnerabilities have been reported in Microsoft products that could allow an attacker to gain elevated privileges, obtain sensitive information, execute arbitrary code remotely, bypass security restrictions, conduct spoofing attacks, perform tampering of data or system processes, or cause denial-of-service (DoS) conditions. CVE-2026-56155: This vulnerability exists in Microsoft Active Directory Federation Services (AD FS) due to insufficient granularity of access control. An authenticated attacker could exploit this vulnerability to elevate privileges on the affected system. CVE-2026-56164: This vulnerability exists in Microsoft Office SharePoint due to missing authentication for a critical function. An unauthenticated attacker could exploit this vulnerability over a network to elevate privileges. CVE-2026-58644: This vulnerability exists in Microsoft Office SharePoint due to deserialization of untrusted data. An unauthenticated attacker could exploit this vulnerability by sending specially crafted requests to execute arbitrary code on the target server over a network. Note: The vulnerabilities CVE-2026-56155 CVE-2026-56164 and CVE-2026-58644 are being exploited in the wild. Users are advised to apply patches immediately. For complete list of affected products, CVEs, workarounds and",
+    "softwareAffected": [
+      "Microsoft Windows",
+      "Microsoft Office",
+      "Microsoft Dynamics",
+      "Developer Tools",
+      "SQL Server",
+      "Extended Security Updates (ESU) for legacy Microsoft products",
+      "Azure",
+      "Apps",
+      "Device",
+      "Open Source Software",
+      "Server Software",
+      "System Center",
+      "Other (Microsoft Copilot, Minecraft Bedrock Dedicated Server, GitHub Copilot Plugin for JetBrains IDEs, Age of Empires II: Definitive Edition Game)"
+    ],
+    "targetAudience": "Individuals and IT administrators, security teams responsible for maintaining and updating Microsoft products.",
+    "riskAssessment": "Risk of remote code execution, system instability or sensitive information disclosure.",
+    "impactAssessment": "Potential compromise of system, exfiltration of data, ransomware attacks or system crashes.",
+    "cves": [
+      "CVE-2026-56155",
+      "CVE-2026-56164",
+      "CVE-2026-58644"
     ],
     "solutionLinks": []
   },
@@ -72,39 +176,6 @@
       "CVE-2026-15916",
       "CVE-2026-15917",
       "CVE-2026-55805"
-    ],
-    "solutionLinks": []
-  },
-  {
-    "title": "Multiple Vulnerabilities in Microsoft Products",
-    "severity": "high",
-    "date": "2026-07-17",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES02&VLCODE=CIAD-2026-0035",
-    "code": "CIAD-2026-0035",
-    "summary": "Multiple vulnerabilities have been reported in Microsoft products that could allow an attacker to gain elevated privileges, obtain sensitive information, execute arbitrary code remotely, bypass security restrictions, conduct spoofing attacks, perform tampering of data or system processes, or cause denial-of-service (DoS) conditions.",
-    "description": "Multiple vulnerabilities have been reported in Microsoft products that could allow an attacker to gain elevated privileges, obtain sensitive information, execute arbitrary code remotely, bypass security restrictions, conduct spoofing attacks, perform tampering of data or system processes, or cause denial-of-service (DoS) conditions. CVE-2026-56155: This vulnerability exists in Microsoft Active Directory Federation Services (AD FS) due to insufficient granularity of access control. An authenticated attacker could exploit this vulnerability to elevate privileges on the affected system. CVE-2026-56164: This vulnerability exists in Microsoft Office SharePoint due to missing authentication for a critical function. An unauthenticated attacker could exploit this vulnerability over a network to elevate privileges. CVE-2026-58644: This vulnerability exists in Microsoft Office SharePoint due to deserialization of untrusted data. An unauthenticated attacker could exploit this vulnerability by sending specially crafted requests to execute arbitrary code on the target server over a network. Note: The vulnerabilities CVE-2026-56155 CVE-2026-56164 and CVE-2026-58644 are being exploited in the wild. Users are advised to apply patches immediately. For complete list of affected products, CVEs, workarounds and",
-    "softwareAffected": [
-      "Microsoft Windows",
-      "Microsoft Office",
-      "Microsoft Dynamics",
-      "Developer Tools",
-      "SQL Server",
-      "Extended Security Updates (ESU) for legacy Microsoft products",
-      "Azure",
-      "Apps",
-      "Device",
-      "Open Source Software",
-      "Server Software",
-      "System Center",
-      "Other (Microsoft Copilot, Minecraft Bedrock Dedicated Server, GitHub Copilot Plugin for JetBrains IDEs, Age of Empires II: Definitive Edition Game)"
-    ],
-    "targetAudience": "Individuals and IT administrators, security teams responsible for maintaining and updating Microsoft products.",
-    "riskAssessment": "Risk of remote code execution, system instability or sensitive information disclosure.",
-    "impactAssessment": "Potential compromise of system, exfiltration of data, ransomware attacks or system crashes.",
-    "cves": [
-      "CVE-2026-56155",
-      "CVE-2026-56164",
-      "CVE-2026-58644"
     ],
     "solutionLinks": []
   },
@@ -226,6 +297,43 @@
     "solutionLinks": []
   },
   {
+    "title": "CERT-In Advisory CICA-2026-3536",
+    "severity": "high",
+    "date": "2026-07-13",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBADV01&CACODE=CICA-2026-3536",
+    "code": "CICA-2026-3536",
+    "summary": "Multiple vulnerabilities reported.",
+    "description": "",
+    "softwareAffected": "",
+    "targetAudience": "",
+    "riskAssessment": "",
+    "impactAssessment": "",
+    "cves": [],
+    "solutionLinks": []
+  },
+  {
+    "title": "Multiple Vulnerabilities in Ivanti Sentry",
+    "severity": "critical",
+    "date": "2026-07-13",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0363",
+    "code": "CIVN-2026-0363",
+    "summary": "Multiple vulnerabilities have been reported in Ivanti Sentry, which could allow a remote unauthenticated attacker to execute arbitrary code with root privileges, bypass authentication, create arbitrary administrative accounts, and gain full administrative access on the targeted system.",
+    "description": "Ivanti Sentry, formerly known as MobileIron Sentry, is an in-line gateway that manages, encrypts, and secures traffic between mobile devices and backend enterprise systems. Multiple critical vulnerabilities have been reported in Ivanti Sentry due to improper neutralization of special elements used in an operating system command and authentication bypass using an alternate path or channel. Successful exploitation of these vulnerabilities could allow a remote unauthenticated attacker to execute arbitrary code with root privileges, bypass authentication, create arbitrary administrative accounts, and gain full administrative access on the targeted system. Note: CVE-2026-10520 is being actively exploited in the wild.",
+    "softwareAffected": [
+      "Ivanti Sentry 10.5.x versions prior to 10.5.2",
+      "Ivanti Sentry 10.6.x versions prior to 10.6.2",
+      "Ivanti Sentry 10.7.x versions prior to 10.7.1"
+    ],
+    "targetAudience": "IT administrators, security administrators, network administrators, and organizations using Ivanti Sentry.",
+    "riskAssessment": "Critical risk of complete system compromise, unauthorized administrative access, and execution of arbitrary commands.",
+    "impactAssessment": "Potential for complete system compromise, unauthorized administrative access, and arbitrary code execution with root privileges.",
+    "cves": [
+      "CVE-2026-10520",
+      "CVE-2026-10523"
+    ],
+    "solutionLinks": []
+  },
+  {
     "title": "Multiple Vulnerabilities in Drupal",
     "severity": "high",
     "date": "2026-07-13",
@@ -263,39 +371,41 @@
     "solutionLinks": []
   },
   {
-    "title": "CERT-In Advisory CICA-2026-3536",
+    "title": "Multiple Vulnerabilities in PAN-OS",
     "severity": "high",
-    "date": "2026-07-13",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBADV01&CACODE=CICA-2026-3536",
-    "code": "CICA-2026-3536",
-    "summary": "Multiple vulnerabilities reported.",
-    "description": "",
-    "softwareAffected": "",
-    "targetAudience": "",
-    "riskAssessment": "",
-    "impactAssessment": "",
-    "cves": [],
-    "solutionLinks": []
-  },
-  {
-    "title": "Multiple Vulnerabilities in Ivanti Sentry",
-    "severity": "critical",
-    "date": "2026-07-13",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0363",
-    "code": "CIVN-2026-0363",
-    "summary": "Multiple vulnerabilities have been reported in Ivanti Sentry, which could allow a remote unauthenticated attacker to execute arbitrary code with root privileges, bypass authentication, create arbitrary administrative accounts, and gain full administrative access on the targeted system.",
-    "description": "Ivanti Sentry, formerly known as MobileIron Sentry, is an in-line gateway that manages, encrypts, and secures traffic between mobile devices and backend enterprise systems. Multiple critical vulnerabilities have been reported in Ivanti Sentry due to improper neutralization of special elements used in an operating system command and authentication bypass using an alternate path or channel. Successful exploitation of these vulnerabilities could allow a remote unauthenticated attacker to execute arbitrary code with root privileges, bypass authentication, create arbitrary administrative accounts, and gain full administrative access on the targeted system. Note: CVE-2026-10520 is being actively exploited in the wild.",
+    "date": "2026-07-10",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0360",
+    "code": "CIVN-2026-0360",
+    "summary": "Multiple vulnerabilities exist in PAN-OS that could allow an attacker to bypass authentication and security controls, execute arbitrary commands, access sensitive information, perform cross-site scripting (XSS) attacks, manipulate protected resources, disrupt system availability or compromise affected systems.",
+    "description": "PAN-OS is the operating system that powers Palo Alto Networks next-generation firewalls and provides advanced network security and threat prevention capabilities. These vulnerabilities exist in PAN-OS due to improper input validation, missing authentication, command injection, XML injection, server-side request forgery (SSRF), improper access control, information disclosure, and improper neutralization of user-supplied input. Successful exploitation could allow a remote attacker to execute arbitrary commands, bypass authentication or security controls, obtain sensitive information, perform cross-site scripting (XSS), delete files, cause denial of service, or otherwise compromise the confidentiality, integrity and availability of the affected systems.",
     "softwareAffected": [
-      "Ivanti Sentry 10.5.x versions prior to 10.5.2",
-      "Ivanti Sentry 10.6.x versions prior to 10.6.2",
-      "Ivanti Sentry 10.7.x versions prior to 10.7.1"
+      "PAN-OS 12.1 versions prior to 12.1.8",
+      "PAN-OS 11.2 versions prior to 11.2.13",
+      "PAN-OS 11.1 versions prior to 11.1.16",
+      "PAN-OS 10.2 all versions",
+      "Prisma Access Agent versions 24.0 through 26.2.0 on Windows",
+      "Prisma Access Agent versions prior to the applicable fixed release on iOS",
+      "Cortex XDR Broker VM versions prior to the applicable fixed releases",
+      "Prisma Browser versions prior to the applicable fixed releases",
+      "User-ID Terminal Server Agent versions prior to the applicable fixed releases"
     ],
-    "targetAudience": "IT administrators, security administrators, network administrators, and organizations using Ivanti Sentry.",
-    "riskAssessment": "Critical risk of complete system compromise, unauthorized administrative access, and execution of arbitrary commands.",
-    "impactAssessment": "Potential for complete system compromise, unauthorized administrative access, and arbitrary code execution with root privileges.",
+    "targetAudience": "All organizations and administrators using affected PAN-OS deployments and associated Palo Alto Networks products.",
+    "riskAssessment": "High risk of unauthorized access, arbitrary command execution, security control bypass, and compromise of affected PAN-OS deployments.",
+    "impactAssessment": "Potential for arbitrary command execution, unauthorized access to sensitive information, security control bypass, privilege escalation, and compromise of affected systems.",
     "cves": [
-      "CVE-2026-10520",
-      "CVE-2026-10523"
+      "CVE-2026-0276",
+      "CVE-2026-0277",
+      "CVE-2026-0278",
+      "CVE-2026-0279",
+      "CVE-2026-0280",
+      "CVE-2026-0281",
+      "CVE-2026-0282",
+      "CVE-2026-0283",
+      "CVE-2026-0284",
+      "CVE-2026-0285",
+      "CVE-2026-0286",
+      "CVE-2026-0287",
+      "CVE-2026-0288"
     ],
     "solutionLinks": []
   },
@@ -372,45 +482,6 @@
       "CVE-2026-15172",
       "CVE-2026-15173",
       "CVE-2026-15174"
-    ],
-    "solutionLinks": []
-  },
-  {
-    "title": "Multiple Vulnerabilities in PAN-OS",
-    "severity": "high",
-    "date": "2026-07-10",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0360",
-    "code": "CIVN-2026-0360",
-    "summary": "Multiple vulnerabilities exist in PAN-OS that could allow an attacker to bypass authentication and security controls, execute arbitrary commands, access sensitive information, perform cross-site scripting (XSS) attacks, manipulate protected resources, disrupt system availability or compromise affected systems.",
-    "description": "PAN-OS is the operating system that powers Palo Alto Networks next-generation firewalls and provides advanced network security and threat prevention capabilities. These vulnerabilities exist in PAN-OS due to improper input validation, missing authentication, command injection, XML injection, server-side request forgery (SSRF), improper access control, information disclosure, and improper neutralization of user-supplied input. Successful exploitation could allow a remote attacker to execute arbitrary commands, bypass authentication or security controls, obtain sensitive information, perform cross-site scripting (XSS), delete files, cause denial of service, or otherwise compromise the confidentiality, integrity and availability of the affected systems.",
-    "softwareAffected": [
-      "PAN-OS 12.1 versions prior to 12.1.8",
-      "PAN-OS 11.2 versions prior to 11.2.13",
-      "PAN-OS 11.1 versions prior to 11.1.16",
-      "PAN-OS 10.2 all versions",
-      "Prisma Access Agent versions 24.0 through 26.2.0 on Windows",
-      "Prisma Access Agent versions prior to the applicable fixed release on iOS",
-      "Cortex XDR Broker VM versions prior to the applicable fixed releases",
-      "Prisma Browser versions prior to the applicable fixed releases",
-      "User-ID Terminal Server Agent versions prior to the applicable fixed releases"
-    ],
-    "targetAudience": "All organizations and administrators using affected PAN-OS deployments and associated Palo Alto Networks products.",
-    "riskAssessment": "High risk of unauthorized access, arbitrary command execution, security control bypass, and compromise of affected PAN-OS deployments.",
-    "impactAssessment": "Potential for arbitrary command execution, unauthorized access to sensitive information, security control bypass, privilege escalation, and compromise of affected systems.",
-    "cves": [
-      "CVE-2026-0276",
-      "CVE-2026-0277",
-      "CVE-2026-0278",
-      "CVE-2026-0279",
-      "CVE-2026-0280",
-      "CVE-2026-0281",
-      "CVE-2026-0282",
-      "CVE-2026-0283",
-      "CVE-2026-0284",
-      "CVE-2026-0285",
-      "CVE-2026-0286",
-      "CVE-2026-0287",
-      "CVE-2026-0288"
     ],
     "solutionLinks": []
   },
