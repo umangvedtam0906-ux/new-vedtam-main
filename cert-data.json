@@ -76,6 +76,26 @@
     "solutionLinks": []
   },
   {
+    "title": "Multiple Vulnerabilities in WordPress",
+    "severity": "critical",
+    "date": "2026-07-21",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0373",
+    "code": "CIVN-2026-0373",
+    "summary": "Multiple vulnerabilities have been reported in WordPress, which could allow an attacker to perform SQL injection attack, or execute arbitrary code on the targeted system.",
+    "description": "WordPress is an open-source content management system (CMS) used to build websites and blogs. Multiple vulnerabilities exist in WordPress due to a REST API batch endpoint route interpretation conflict (route confusion) and improper sanitization of the author__not_in parameter in WP_Query. Successful exploitation of these vulnerabilities could allow an attacker to perform SQL injection attack, or execute arbitrary code on the targeted system.",
+    "softwareAffected": [
+      "WordPress versions prior to 7.0.2"
+    ],
+    "targetAudience": "Users of affected WordPress versions.",
+    "riskAssessment": "Risk of SQL injection attacks and remote code execution (RCE).",
+    "impactAssessment": "Potential for unauthorized access, execution of arbitrary code, privilege escalation, and full compromise.",
+    "cves": [
+      "CVE-2026-60137",
+      "CVE-2026-63030"
+    ],
+    "solutionLinks": []
+  },
+  {
     "title": "Multiple Vulnerabilities in TP-Link Products",
     "severity": "high",
     "date": "2026-07-21",
@@ -95,26 +115,6 @@
     "cves": [
       "CVE-2026-9770",
       "CVE-2026-13230"
-    ],
-    "solutionLinks": []
-  },
-  {
-    "title": "Multiple Vulnerabilities in SonicWall",
-    "severity": "critical",
-    "date": "2026-07-21",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0371",
-    "code": "CIVN-2026-0371",
-    "summary": "Multiple vulnerabilities have been reported in SonicWall Secure Mobile Access (SMA) 1000 Series appliances, which could allow a remote attacker to perform Server-Side Request Forgery (SSRF) or execute arbitrary operating system commands on the affected systems.",
-    "description": "SonicWall Secure Mobile Access (SMA) 1000 Series appliances are secure remote access",
-    "softwareAffected": [
-      "SonicWall Secure Mobile Access (SMA) 1000 Series appliances"
-    ],
-    "targetAudience": "All end-user organizations and individuals using SonicWall Secure Mobile Access (SMA) 1000 Series appliances.",
-    "riskAssessment": "Risk of arbitrary operating system command execution, Server-Side Request Forgery (SSRF), and compromise of affected systems.",
-    "impactAssessment": "Potential for unauthorized requests to internal or unintended locations, arbitrary operating system command execution with administrative privileges, unauthorized access to resources reachable through the appliance and compromise of affected appliances.",
-    "cves": [
-      "CVE-2026-15409",
-      "CVE-2026-15410"
     ],
     "solutionLinks": []
   },
@@ -147,22 +147,22 @@
     "solutionLinks": []
   },
   {
-    "title": "Multiple Vulnerabilities in WordPress",
+    "title": "Multiple Vulnerabilities in SonicWall",
     "severity": "critical",
     "date": "2026-07-21",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0373",
-    "code": "CIVN-2026-0373",
-    "summary": "Multiple vulnerabilities have been reported in WordPress, which could allow an attacker to perform SQL injection attack, or execute arbitrary code on the targeted system.",
-    "description": "WordPress is an open-source content management system (CMS) used to build websites and blogs. Multiple vulnerabilities exist in WordPress due to a REST API batch endpoint route interpretation conflict (route confusion) and improper sanitization of the author__not_in parameter in WP_Query. Successful exploitation of these vulnerabilities could allow an attacker to perform SQL injection attack, or execute arbitrary code on the targeted system.",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0371",
+    "code": "CIVN-2026-0371",
+    "summary": "Multiple vulnerabilities have been reported in SonicWall Secure Mobile Access (SMA) 1000 Series appliances, which could allow a remote attacker to perform Server-Side Request Forgery (SSRF) or execute arbitrary operating system commands on the affected systems.",
+    "description": "SonicWall Secure Mobile Access (SMA) 1000 Series appliances are secure remote access",
     "softwareAffected": [
-      "WordPress versions prior to 7.0.2"
+      "SonicWall Secure Mobile Access (SMA) 1000 Series appliances"
     ],
-    "targetAudience": "Users of affected WordPress versions.",
-    "riskAssessment": "Risk of SQL injection attacks and remote code execution (RCE).",
-    "impactAssessment": "Potential for unauthorized access, execution of arbitrary code, privilege escalation, and full compromise.",
+    "targetAudience": "All end-user organizations and individuals using SonicWall Secure Mobile Access (SMA) 1000 Series appliances.",
+    "riskAssessment": "Risk of arbitrary operating system command execution, Server-Side Request Forgery (SSRF), and compromise of affected systems.",
+    "impactAssessment": "Potential for unauthorized requests to internal or unintended locations, arbitrary operating system command execution with administrative privileges, unauthorized access to resources reachable through the appliance and compromise of affected appliances.",
     "cves": [
-      "CVE-2026-60137",
-      "CVE-2026-63030"
+      "CVE-2026-15409",
+      "CVE-2026-15410"
     ],
     "solutionLinks": []
   },
@@ -224,32 +224,6 @@
     "solutionLinks": []
   },
   {
-    "title": "Multiple Vulnerabilities in GitLab Community Edition (CE) and Enterprise Edition (EE)",
-    "severity": "high",
-    "date": "2026-07-17",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0368",
-    "code": "CIVN-2026-0368",
-    "summary": "Multiple vulnerabilities have been reported in GitLab that could be exploited by an attacker to execute arbitrary scripts, perform Cross-Site Scripting (XSS) attacks, gain unauthorized access to protected resources, and perform unauthorized actions on the targeted system.",
-    "description": "GitLab is a web-based DevOps platform that provides tools for software development, including source code management, continuous integration and continuous deployment. It is available as Community Edition (CE) and Enterprise Edition (EE). Multiple vulnerabilities exist in GitLab due to improper sanitization of user-supplied input, insufficient authorization controls, missing access-control checks and improper handling of Git reference name re",
-    "softwareAffected": [
-      "GitLab Community Edition (CE) and Enterprise Edition (EE) versions prior to 18.11.7, 19.0.4 and 19.1.2"
-    ],
-    "targetAudience": "All organizations and individuals using self-managed GitLab installations.",
-    "riskAssessment": "High risk of cross-site scripting, sensitive information disclosure, credential exposure and unauthorized modification of settings or records.",
-    "impactAssessment": "Potential for sensitive data theft, confidential information disclosure, session compromise through Cross-Site Scripting (XSS), unauthorized modification of settings or records, exposure of stored credentials, repository content manipulation, and loss of data integrity.",
-    "cves": [
-      "CVE-2026-6896",
-      "CVE-2026-13320",
-      "CVE-2026-11827",
-      "CVE-2026-8472",
-      "CVE-2026-7492",
-      "CVE-2025-12506",
-      "CVE-2026-13151",
-      "CVE-2026-6352"
-    ],
-    "solutionLinks": []
-  },
-  {
     "title": "Multiple Vulnerabilities in Drupal",
     "severity": "high",
     "date": "2026-07-17",
@@ -276,6 +250,32 @@
     "solutionLinks": []
   },
   {
+    "title": "Multiple Vulnerabilities in GitLab Community Edition (CE) and Enterprise Edition (EE)",
+    "severity": "high",
+    "date": "2026-07-17",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0368",
+    "code": "CIVN-2026-0368",
+    "summary": "Multiple vulnerabilities have been reported in GitLab that could be exploited by an attacker to execute arbitrary scripts, perform Cross-Site Scripting (XSS) attacks, gain unauthorized access to protected resources, and perform unauthorized actions on the targeted system.",
+    "description": "GitLab is a web-based DevOps platform that provides tools for software development, including source code management, continuous integration and continuous deployment. It is available as Community Edition (CE) and Enterprise Edition (EE). Multiple vulnerabilities exist in GitLab due to improper sanitization of user-supplied input, insufficient authorization controls, missing access-control checks and improper handling of Git reference name re",
+    "softwareAffected": [
+      "GitLab Community Edition (CE) and Enterprise Edition (EE) versions prior to 18.11.7, 19.0.4 and 19.1.2"
+    ],
+    "targetAudience": "All organizations and individuals using self-managed GitLab installations.",
+    "riskAssessment": "High risk of cross-site scripting, sensitive information disclosure, credential exposure and unauthorized modification of settings or records.",
+    "impactAssessment": "Potential for sensitive data theft, confidential information disclosure, session compromise through Cross-Site Scripting (XSS), unauthorized modification of settings or records, exposure of stored credentials, repository content manipulation, and loss of data integrity.",
+    "cves": [
+      "CVE-2026-6896",
+      "CVE-2026-13320",
+      "CVE-2026-11827",
+      "CVE-2026-8472",
+      "CVE-2026-7492",
+      "CVE-2025-12506",
+      "CVE-2026-13151",
+      "CVE-2026-6352"
+    ],
+    "solutionLinks": []
+  },
+  {
     "title": "Multiple vulnerabilities in Drupal products",
     "severity": "high",
     "date": "2026-07-17",
@@ -297,6 +297,26 @@
       "CVE-2026-58589",
       "CVE-2026-58590",
       "CVE-2026-58591"
+    ],
+    "solutionLinks": []
+  },
+  {
+    "title": "Multiple Vulnerabilities in Mozilla Firefox",
+    "severity": "critical",
+    "date": "2026-07-16",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0365",
+    "code": "CIVN-2026-0365",
+    "summary": "Multiple vulnerabilities have been reported in Mozilla Firefox which could allow a remote attacker to execute arbitrary code, bypass security restrictions, denial of service, and data manipulation on the targeted system.",
+    "description": "Mozilla Firefox is a free and open-source web browser developed by the Mozilla Foundation. Multiple vulnerabilities exist in Mozilla Firefox due to an Invalid pointer in the JavaScript of WebAssembly component and Improper site isolation in the DOM of Navigation component. Successful exploitation of these vulnerabilities could allow a remote attacker to execute arbitrary code, bypass security restrictions, denial of service, and data manipulation on the targeted system.",
+    "softwareAffected": [
+      "Mozilla Firefox versions prior to 152.0.6."
+    ],
+    "targetAudience": "All end-user organizations and individuals using Mozilla Firefox.",
+    "riskAssessment": "High risk of denial of service (DoS), and data manipulation on the targeted system.",
+    "impactAssessment": "Potential for remote code execution and bypass security restrictions.",
+    "cves": [
+      "CVE-2026-15718",
+      "CVE-2026-15719"
     ],
     "solutionLinks": []
   },
@@ -354,26 +374,6 @@
     "solutionLinks": []
   },
   {
-    "title": "Multiple Vulnerabilities in Mozilla Firefox",
-    "severity": "critical",
-    "date": "2026-07-16",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0365",
-    "code": "CIVN-2026-0365",
-    "summary": "Multiple vulnerabilities have been reported in Mozilla Firefox which could allow a remote attacker to execute arbitrary code, bypass security restrictions, denial of service, and data manipulation on the targeted system.",
-    "description": "Mozilla Firefox is a free and open-source web browser developed by the Mozilla Foundation. Multiple vulnerabilities exist in Mozilla Firefox due to an Invalid pointer in the JavaScript of WebAssembly component and Improper site isolation in the DOM of Navigation component. Successful exploitation of these vulnerabilities could allow a remote attacker to execute arbitrary code, bypass security restrictions, denial of service, and data manipulation on the targeted system.",
-    "softwareAffected": [
-      "Mozilla Firefox versions prior to 152.0.6."
-    ],
-    "targetAudience": "All end-user organizations and individuals using Mozilla Firefox.",
-    "riskAssessment": "High risk of denial of service (DoS), and data manipulation on the targeted system.",
-    "impactAssessment": "Potential for remote code execution and bypass security restrictions.",
-    "cves": [
-      "CVE-2026-15718",
-      "CVE-2026-15719"
-    ],
-    "solutionLinks": []
-  },
-  {
     "title": "Remote Code Execution Vulnerability in SP Pagebuilder Extension for Joomla",
     "severity": "high",
     "date": "2026-07-15",
@@ -390,21 +390,6 @@
     "cves": [
       "CVE-2026-48908"
     ],
-    "solutionLinks": []
-  },
-  {
-    "title": "CERT-In Advisory CICA-2026-3536",
-    "severity": "high",
-    "date": "2026-07-13",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBADV01&CACODE=CICA-2026-3536",
-    "code": "CICA-2026-3536",
-    "summary": "Multiple vulnerabilities reported.",
-    "description": "",
-    "softwareAffected": "",
-    "targetAudience": "",
-    "riskAssessment": "",
-    "impactAssessment": "",
-    "cves": [],
     "solutionLinks": []
   },
   {
@@ -467,33 +452,18 @@
     "solutionLinks": []
   },
   {
-    "title": "Multiple Vulnerabilities in Wireshark",
+    "title": "CERT-In Advisory CICA-2026-3536",
     "severity": "high",
-    "date": "2026-07-10",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0361",
-    "code": "CIVN-2026-0361",
-    "summary": "Multiple vulnerabilities have been reported in Wireshark that could allow an attacker to obtain sensitive information or cause denial of service (DoS) condition on the targeted system.",
-    "description": "Wireshark is a network protocol analyzer used to capture and inspect data packets in real time for troubleshooting, analysis, and security purposes. Multiple vulnerabilities have been reported in Wireshark due to improper input validation. An attacker could exploit these vulnerabilities by sending a specially crafted request. Successful exploitation of these vulnerabilities could allow an attacker to obtain sensitive information or trigger denial of service (DoS) condition on the targeted system.",
-    "softwareAffected": [
-      "Wireshark versions 4.6.0 to 4.6.6, 4.4.0 to 4.4.16."
-    ],
-    "targetAudience": "All end-users organisations and individual using Wireshark.",
-    "riskAssessment": "High risk of service unavailability.",
-    "impactAssessment": "Potential for sensitive data exposure, disruption of services.",
-    "cves": [
-      "CVE-2026-15164",
-      "CVE-2026-15167",
-      "CVE-2026-15163",
-      "CVE-2026-15168",
-      "CVE-2026-15169",
-      "CVE-2026-15170",
-      "CVE-2026-15166",
-      "CVE-2026-15165",
-      "CVE-2026-15171",
-      "CVE-2026-15172",
-      "CVE-2026-15173",
-      "CVE-2026-15174"
-    ],
+    "date": "2026-07-13",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBADV01&CACODE=CICA-2026-3536",
+    "code": "CICA-2026-3536",
+    "summary": "Multiple vulnerabilities reported.",
+    "description": "",
+    "softwareAffected": "",
+    "targetAudience": "",
+    "riskAssessment": "",
+    "impactAssessment": "",
+    "cves": [],
     "solutionLinks": []
   },
   {
@@ -532,6 +502,36 @@
       "CVE-2026-0286",
       "CVE-2026-0287",
       "CVE-2026-0288"
+    ],
+    "solutionLinks": []
+  },
+  {
+    "title": "Multiple Vulnerabilities in Wireshark",
+    "severity": "high",
+    "date": "2026-07-10",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0361",
+    "code": "CIVN-2026-0361",
+    "summary": "Multiple vulnerabilities have been reported in Wireshark that could allow an attacker to obtain sensitive information or cause denial of service (DoS) condition on the targeted system.",
+    "description": "Wireshark is a network protocol analyzer used to capture and inspect data packets in real time for troubleshooting, analysis, and security purposes. Multiple vulnerabilities have been reported in Wireshark due to improper input validation. An attacker could exploit these vulnerabilities by sending a specially crafted request. Successful exploitation of these vulnerabilities could allow an attacker to obtain sensitive information or trigger denial of service (DoS) condition on the targeted system.",
+    "softwareAffected": [
+      "Wireshark versions 4.6.0 to 4.6.6, 4.4.0 to 4.4.16."
+    ],
+    "targetAudience": "All end-users organisations and individual using Wireshark.",
+    "riskAssessment": "High risk of service unavailability.",
+    "impactAssessment": "Potential for sensitive data exposure, disruption of services.",
+    "cves": [
+      "CVE-2026-15164",
+      "CVE-2026-15167",
+      "CVE-2026-15163",
+      "CVE-2026-15168",
+      "CVE-2026-15169",
+      "CVE-2026-15170",
+      "CVE-2026-15166",
+      "CVE-2026-15165",
+      "CVE-2026-15171",
+      "CVE-2026-15172",
+      "CVE-2026-15173",
+      "CVE-2026-15174"
     ],
     "solutionLinks": []
   },
