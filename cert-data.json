@@ -23,32 +23,6 @@
     "solutionLinks": []
   },
   {
-    "title": "Multiple Vulnerabilities in Zoom Products",
-    "severity": "critical",
-    "date": "2026-07-22",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0374",
-    "code": "CIVN-2026-0374",
-    "summary": "Multiple vulnerabilities have been reported in Zoom products that could be exploited by an attacker to achieve privilege escalation and account takeover via network access.",
-    "description": "Zoom is a communications platform that provides video conferencing, team chat, phone services, whiteboard, mail, calendar, and other collaboration services for individuals and organisations. Multiple vulnerabilities exist in Zoom products due to improper input validation, race conditions (time-of-check to time-of-use), and improper privilege management. Successful exploitation of these vulnerabilities could allow an attacker to gain elevated privileges and account takeover via network access on the targeted system.",
-    "softwareAffected": [
-      "Zoom Rooms for Windows before version 7.1.0",
-      "Zoom Workplace for Windows before version 7.0.5",
-      "Zoom Workplace VDI Client for Windows before versions 6.5.18, 6.6.15 and 7.0.10 in their respective branch",
-      "Zoom Workplace VDI plugin for Windows before versions 6.5.17 and 6.6.14 in their respective branch",
-      "Zoom Remote Control for Zoom Contact Center for Windows before version 7.0.0"
-    ],
-    "targetAudience": "All end-user organisations and individuals using the affected versions of Zoom applications.",
-    "riskAssessment": "Critical risk of unauthorized access, privilege escalation, and system compromise.",
-    "impactAssessment": "Potential for bypassing security restrictions, privilege escalation, and account takeover.",
-    "cves": [
-      "CVE-2026-53409",
-      "CVE-2026-53410",
-      "CVE-2026-53411",
-      "CVE-2026-53412"
-    ],
-    "solutionLinks": []
-  },
-  {
     "title": "Multiple Vulnerabilities in Oracle Products",
     "severity": "high",
     "date": "2026-07-22",
@@ -73,6 +47,32 @@
     "riskAssessment": "Risk of remote code execution, system instability or sensitive information disclosure.",
     "impactAssessment": "Potential unauthorized access to sensitive information, denial of service, data manipulation, and complete takeover of control of the target system.",
     "cves": [],
+    "solutionLinks": []
+  },
+  {
+    "title": "Multiple Vulnerabilities in Zoom Products",
+    "severity": "critical",
+    "date": "2026-07-22",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0374",
+    "code": "CIVN-2026-0374",
+    "summary": "Multiple vulnerabilities have been reported in Zoom products that could be exploited by an attacker to achieve privilege escalation and account takeover via network access.",
+    "description": "Zoom is a communications platform that provides video conferencing, team chat, phone services, whiteboard, mail, calendar, and other collaboration services for individuals and organisations. Multiple vulnerabilities exist in Zoom products due to improper input validation, race conditions (time-of-check to time-of-use), and improper privilege management. Successful exploitation of these vulnerabilities could allow an attacker to gain elevated privileges and account takeover via network access on the targeted system.",
+    "softwareAffected": [
+      "Zoom Rooms for Windows before version 7.1.0",
+      "Zoom Workplace for Windows before version 7.0.5",
+      "Zoom Workplace VDI Client for Windows before versions 6.5.18, 6.6.15 and 7.0.10 in their respective branch",
+      "Zoom Workplace VDI plugin for Windows before versions 6.5.17 and 6.6.14 in their respective branch",
+      "Zoom Remote Control for Zoom Contact Center for Windows before version 7.0.0"
+    ],
+    "targetAudience": "All end-user organisations and individuals using the affected versions of Zoom applications.",
+    "riskAssessment": "Critical risk of unauthorized access, privilege escalation, and system compromise.",
+    "impactAssessment": "Potential for bypassing security restrictions, privilege escalation, and account takeover.",
+    "cves": [
+      "CVE-2026-53409",
+      "CVE-2026-53410",
+      "CVE-2026-53411",
+      "CVE-2026-53412"
+    ],
     "solutionLinks": []
   },
   {
@@ -191,6 +191,32 @@
     "solutionLinks": []
   },
   {
+    "title": "Multiple Vulnerabilities in GitLab Community Edition (CE) and Enterprise Edition (EE)",
+    "severity": "high",
+    "date": "2026-07-17",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0368",
+    "code": "CIVN-2026-0368",
+    "summary": "Multiple vulnerabilities have been reported in GitLab that could be exploited by an attacker to execute arbitrary scripts, perform Cross-Site Scripting (XSS) attacks, gain unauthorized access to protected resources, and perform unauthorized actions on the targeted system.",
+    "description": "GitLab is a web-based DevOps platform that provides tools for software development, including source code management, continuous integration and continuous deployment. It is available as Community Edition (CE) and Enterprise Edition (EE). Multiple vulnerabilities exist in GitLab due to improper sanitization of user-supplied input, insufficient authorization controls, missing access-control checks and improper handling of Git reference name re",
+    "softwareAffected": [
+      "GitLab Community Edition (CE) and Enterprise Edition (EE) versions prior to 18.11.7, 19.0.4 and 19.1.2"
+    ],
+    "targetAudience": "All organizations and individuals using self-managed GitLab installations.",
+    "riskAssessment": "High risk of cross-site scripting, sensitive information disclosure, credential exposure and unauthorized modification of settings or records.",
+    "impactAssessment": "Potential for sensitive data theft, confidential information disclosure, session compromise through Cross-Site Scripting (XSS), unauthorized modification of settings or records, exposure of stored credentials, repository content manipulation, and loss of data integrity.",
+    "cves": [
+      "CVE-2026-6896",
+      "CVE-2026-13320",
+      "CVE-2026-11827",
+      "CVE-2026-8472",
+      "CVE-2026-7492",
+      "CVE-2025-12506",
+      "CVE-2026-13151",
+      "CVE-2026-6352"
+    ],
+    "solutionLinks": []
+  },
+  {
     "title": "Multiple Vulnerabilities in Microsoft Products",
     "severity": "high",
     "date": "2026-07-17",
@@ -250,32 +276,6 @@
     "solutionLinks": []
   },
   {
-    "title": "Multiple Vulnerabilities in GitLab Community Edition (CE) and Enterprise Edition (EE)",
-    "severity": "high",
-    "date": "2026-07-17",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0368",
-    "code": "CIVN-2026-0368",
-    "summary": "Multiple vulnerabilities have been reported in GitLab that could be exploited by an attacker to execute arbitrary scripts, perform Cross-Site Scripting (XSS) attacks, gain unauthorized access to protected resources, and perform unauthorized actions on the targeted system.",
-    "description": "GitLab is a web-based DevOps platform that provides tools for software development, including source code management, continuous integration and continuous deployment. It is available as Community Edition (CE) and Enterprise Edition (EE). Multiple vulnerabilities exist in GitLab due to improper sanitization of user-supplied input, insufficient authorization controls, missing access-control checks and improper handling of Git reference name re",
-    "softwareAffected": [
-      "GitLab Community Edition (CE) and Enterprise Edition (EE) versions prior to 18.11.7, 19.0.4 and 19.1.2"
-    ],
-    "targetAudience": "All organizations and individuals using self-managed GitLab installations.",
-    "riskAssessment": "High risk of cross-site scripting, sensitive information disclosure, credential exposure and unauthorized modification of settings or records.",
-    "impactAssessment": "Potential for sensitive data theft, confidential information disclosure, session compromise through Cross-Site Scripting (XSS), unauthorized modification of settings or records, exposure of stored credentials, repository content manipulation, and loss of data integrity.",
-    "cves": [
-      "CVE-2026-6896",
-      "CVE-2026-13320",
-      "CVE-2026-11827",
-      "CVE-2026-8472",
-      "CVE-2026-7492",
-      "CVE-2025-12506",
-      "CVE-2026-13151",
-      "CVE-2026-6352"
-    ],
-    "solutionLinks": []
-  },
-  {
     "title": "Multiple vulnerabilities in Drupal products",
     "severity": "high",
     "date": "2026-07-17",
@@ -297,26 +297,6 @@
       "CVE-2026-58589",
       "CVE-2026-58590",
       "CVE-2026-58591"
-    ],
-    "solutionLinks": []
-  },
-  {
-    "title": "Multiple Vulnerabilities in Mozilla Firefox",
-    "severity": "critical",
-    "date": "2026-07-16",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0365",
-    "code": "CIVN-2026-0365",
-    "summary": "Multiple vulnerabilities have been reported in Mozilla Firefox which could allow a remote attacker to execute arbitrary code, bypass security restrictions, denial of service, and data manipulation on the targeted system.",
-    "description": "Mozilla Firefox is a free and open-source web browser developed by the Mozilla Foundation. Multiple vulnerabilities exist in Mozilla Firefox due to an Invalid pointer in the JavaScript of WebAssembly component and Improper site isolation in the DOM of Navigation component. Successful exploitation of these vulnerabilities could allow a remote attacker to execute arbitrary code, bypass security restrictions, denial of service, and data manipulation on the targeted system.",
-    "softwareAffected": [
-      "Mozilla Firefox versions prior to 152.0.6."
-    ],
-    "targetAudience": "All end-user organizations and individuals using Mozilla Firefox.",
-    "riskAssessment": "High risk of denial of service (DoS), and data manipulation on the targeted system.",
-    "impactAssessment": "Potential for remote code execution and bypass security restrictions.",
-    "cves": [
-      "CVE-2026-15718",
-      "CVE-2026-15719"
     ],
     "solutionLinks": []
   },
@@ -370,6 +350,26 @@
       "CVE-2026-44768",
       "CVE-2026-44753",
       "CVE-2025-68161"
+    ],
+    "solutionLinks": []
+  },
+  {
+    "title": "Multiple Vulnerabilities in Mozilla Firefox",
+    "severity": "critical",
+    "date": "2026-07-16",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0365",
+    "code": "CIVN-2026-0365",
+    "summary": "Multiple vulnerabilities have been reported in Mozilla Firefox which could allow a remote attacker to execute arbitrary code, bypass security restrictions, denial of service, and data manipulation on the targeted system.",
+    "description": "Mozilla Firefox is a free and open-source web browser developed by the Mozilla Foundation. Multiple vulnerabilities exist in Mozilla Firefox due to an Invalid pointer in the JavaScript of WebAssembly component and Improper site isolation in the DOM of Navigation component. Successful exploitation of these vulnerabilities could allow a remote attacker to execute arbitrary code, bypass security restrictions, denial of service, and data manipulation on the targeted system.",
+    "softwareAffected": [
+      "Mozilla Firefox versions prior to 152.0.6."
+    ],
+    "targetAudience": "All end-user organizations and individuals using Mozilla Firefox.",
+    "riskAssessment": "High risk of denial of service (DoS), and data manipulation on the targeted system.",
+    "impactAssessment": "Potential for remote code execution and bypass security restrictions.",
+    "cves": [
+      "CVE-2026-15718",
+      "CVE-2026-15719"
     ],
     "solutionLinks": []
   },
@@ -467,6 +467,36 @@
     "solutionLinks": []
   },
   {
+    "title": "Multiple Vulnerabilities in Wireshark",
+    "severity": "high",
+    "date": "2026-07-10",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0361",
+    "code": "CIVN-2026-0361",
+    "summary": "Multiple vulnerabilities have been reported in Wireshark that could allow an attacker to obtain sensitive information or cause denial of service (DoS) condition on the targeted system.",
+    "description": "Wireshark is a network protocol analyzer used to capture and inspect data packets in real time for troubleshooting, analysis, and security purposes. Multiple vulnerabilities have been reported in Wireshark due to improper input validation. An attacker could exploit these vulnerabilities by sending a specially crafted request. Successful exploitation of these vulnerabilities could allow an attacker to obtain sensitive information or trigger denial of service (DoS) condition on the targeted system.",
+    "softwareAffected": [
+      "Wireshark versions 4.6.0 to 4.6.6, 4.4.0 to 4.4.16."
+    ],
+    "targetAudience": "All end-users organisations and individual using Wireshark.",
+    "riskAssessment": "High risk of service unavailability.",
+    "impactAssessment": "Potential for sensitive data exposure, disruption of services.",
+    "cves": [
+      "CVE-2026-15164",
+      "CVE-2026-15167",
+      "CVE-2026-15163",
+      "CVE-2026-15168",
+      "CVE-2026-15169",
+      "CVE-2026-15170",
+      "CVE-2026-15166",
+      "CVE-2026-15165",
+      "CVE-2026-15171",
+      "CVE-2026-15172",
+      "CVE-2026-15173",
+      "CVE-2026-15174"
+    ],
+    "solutionLinks": []
+  },
+  {
     "title": "Multiple Vulnerabilities in PAN-OS",
     "severity": "high",
     "date": "2026-07-10",
@@ -502,36 +532,6 @@
       "CVE-2026-0286",
       "CVE-2026-0287",
       "CVE-2026-0288"
-    ],
-    "solutionLinks": []
-  },
-  {
-    "title": "Multiple Vulnerabilities in Wireshark",
-    "severity": "high",
-    "date": "2026-07-10",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0361",
-    "code": "CIVN-2026-0361",
-    "summary": "Multiple vulnerabilities have been reported in Wireshark that could allow an attacker to obtain sensitive information or cause denial of service (DoS) condition on the targeted system.",
-    "description": "Wireshark is a network protocol analyzer used to capture and inspect data packets in real time for troubleshooting, analysis, and security purposes. Multiple vulnerabilities have been reported in Wireshark due to improper input validation. An attacker could exploit these vulnerabilities by sending a specially crafted request. Successful exploitation of these vulnerabilities could allow an attacker to obtain sensitive information or trigger denial of service (DoS) condition on the targeted system.",
-    "softwareAffected": [
-      "Wireshark versions 4.6.0 to 4.6.6, 4.4.0 to 4.4.16."
-    ],
-    "targetAudience": "All end-users organisations and individual using Wireshark.",
-    "riskAssessment": "High risk of service unavailability.",
-    "impactAssessment": "Potential for sensitive data exposure, disruption of services.",
-    "cves": [
-      "CVE-2026-15164",
-      "CVE-2026-15167",
-      "CVE-2026-15163",
-      "CVE-2026-15168",
-      "CVE-2026-15169",
-      "CVE-2026-15170",
-      "CVE-2026-15166",
-      "CVE-2026-15165",
-      "CVE-2026-15171",
-      "CVE-2026-15172",
-      "CVE-2026-15173",
-      "CVE-2026-15174"
     ],
     "solutionLinks": []
   },
