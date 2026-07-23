@@ -1,5 +1,39 @@
 [
   {
+    "title": "Multiple Vulnerabilities in Microsoft Products",
+    "severity": "critical",
+    "date": "2026-07-23",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0376",
+    "code": "CIVN-2026-0376",
+    "summary": "Multiple vulnerabilities have been reported in Microsoft Products, which could allow an attacker to perform spoofing, elevate privilege, perform tampering and disclose sensitive information on the targeted system.",
+    "description": "Multiple vulnerabilities have been reported in Microsoft Products due to improper neutralization of input during web page generation, URL redirection to untrusted site, missing authorization, execution with unnecessary privileges, improper access control, improper authentication, exposure of sensitive information, and improper neutralization of special elements in command. An attacker could exploit these vulnerabilities to perform spoofing, elevate privileges, perform tampering or disclose information over a network on the targeted system. Successful exploitation of these vulnerabilities could allow an attacker to gain unauthorized access, access sensitive information, elevate privileges, perform tampering over a network and/or perform spoofing on the targeted system.",
+    "softwareAffected": [
+      "Dynamics 365 Customer Voice",
+      "Microsoft 365 Copilot",
+      "Microsoft Exchange Online",
+      "Azure Synapse",
+      "Microsoft Dynamics 365",
+      "Azure AI Bot Service",
+      "Microsoft Edge (Chromium-based)",
+      "Microsoft Cost Management"
+    ],
+    "targetAudience": "All end-user organizations and individuals using Microsoft Products.",
+    "riskAssessment": "High risk of privilege escalation, spoofing, sensitive information disclosure.",
+    "impactAssessment": "Potential for privilege escalation, spoofing, sensitive information disclosure and/or compromise of system.",
+    "cves": [
+      "CVE-2026-47646",
+      "CVE-2026-47645",
+      "CVE-2026-48582",
+      "CVE-2026-48584",
+      "CVE-2026-47647",
+      "CVE-2026-42895",
+      "CVE-2026-32174",
+      "CVE-2026-32208",
+      "CVE-2026-47633"
+    ],
+    "solutionLinks": []
+  },
+  {
     "title": "Multiple Vulnerabilities in BeyondTrust",
     "severity": "critical",
     "date": "2026-07-22",
@@ -19,6 +53,32 @@
       "CVE-2026-40139",
       "CVE-2026-40140",
       "CVE-2026-40141"
+    ],
+    "solutionLinks": []
+  },
+  {
+    "title": "Multiple Vulnerabilities in Zoom Products",
+    "severity": "critical",
+    "date": "2026-07-22",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0374",
+    "code": "CIVN-2026-0374",
+    "summary": "Multiple vulnerabilities have been reported in Zoom products that could be exploited by an attacker to achieve privilege escalation and account takeover via network access.",
+    "description": "Zoom is a communications platform that provides video conferencing, team chat, phone services, whiteboard, mail, calendar, and other collaboration services for individuals and organisations. Multiple vulnerabilities exist in Zoom products due to improper input validation, race conditions (time-of-check to time-of-use), and improper privilege management. Successful exploitation of these vulnerabilities could allow an attacker to gain elevated privileges and account takeover via network access on the targeted system.",
+    "softwareAffected": [
+      "Zoom Rooms for Windows before version 7.1.0",
+      "Zoom Workplace for Windows before version 7.0.5",
+      "Zoom Workplace VDI Client for Windows before versions 6.5.18, 6.6.15 and 7.0.10 in their respective branch",
+      "Zoom Workplace VDI plugin for Windows before versions 6.5.17 and 6.6.14 in their respective branch",
+      "Zoom Remote Control for Zoom Contact Center for Windows before version 7.0.0"
+    ],
+    "targetAudience": "All end-user organisations and individuals using the affected versions of Zoom applications.",
+    "riskAssessment": "Critical risk of unauthorized access, privilege escalation, and system compromise.",
+    "impactAssessment": "Potential for bypassing security restrictions, privilege escalation, and account takeover.",
+    "cves": [
+      "CVE-2026-53409",
+      "CVE-2026-53410",
+      "CVE-2026-53411",
+      "CVE-2026-53412"
     ],
     "solutionLinks": []
   },
@@ -50,32 +110,6 @@
     "solutionLinks": []
   },
   {
-    "title": "Multiple Vulnerabilities in Zoom Products",
-    "severity": "critical",
-    "date": "2026-07-22",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0374",
-    "code": "CIVN-2026-0374",
-    "summary": "Multiple vulnerabilities have been reported in Zoom products that could be exploited by an attacker to achieve privilege escalation and account takeover via network access.",
-    "description": "Zoom is a communications platform that provides video conferencing, team chat, phone services, whiteboard, mail, calendar, and other collaboration services for individuals and organisations. Multiple vulnerabilities exist in Zoom products due to improper input validation, race conditions (time-of-check to time-of-use), and improper privilege management. Successful exploitation of these vulnerabilities could allow an attacker to gain elevated privileges and account takeover via network access on the targeted system.",
-    "softwareAffected": [
-      "Zoom Rooms for Windows before version 7.1.0",
-      "Zoom Workplace for Windows before version 7.0.5",
-      "Zoom Workplace VDI Client for Windows before versions 6.5.18, 6.6.15 and 7.0.10 in their respective branch",
-      "Zoom Workplace VDI plugin for Windows before versions 6.5.17 and 6.6.14 in their respective branch",
-      "Zoom Remote Control for Zoom Contact Center for Windows before version 7.0.0"
-    ],
-    "targetAudience": "All end-user organisations and individuals using the affected versions of Zoom applications.",
-    "riskAssessment": "Critical risk of unauthorized access, privilege escalation, and system compromise.",
-    "impactAssessment": "Potential for bypassing security restrictions, privilege escalation, and account takeover.",
-    "cves": [
-      "CVE-2026-53409",
-      "CVE-2026-53410",
-      "CVE-2026-53411",
-      "CVE-2026-53412"
-    ],
-    "solutionLinks": []
-  },
-  {
     "title": "Multiple Vulnerabilities in WordPress",
     "severity": "critical",
     "date": "2026-07-21",
@@ -92,6 +126,26 @@
     "cves": [
       "CVE-2026-60137",
       "CVE-2026-63030"
+    ],
+    "solutionLinks": []
+  },
+  {
+    "title": "Multiple Vulnerabilities in SonicWall",
+    "severity": "critical",
+    "date": "2026-07-21",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0371",
+    "code": "CIVN-2026-0371",
+    "summary": "Multiple vulnerabilities have been reported in SonicWall Secure Mobile Access (SMA) 1000 Series appliances, which could allow a remote attacker to perform Server-Side Request Forgery (SSRF) or execute arbitrary operating system commands on the affected systems.",
+    "description": "SonicWall Secure Mobile Access (SMA) 1000 Series appliances are secure remote access",
+    "softwareAffected": [
+      "SonicWall Secure Mobile Access (SMA) 1000 Series appliances"
+    ],
+    "targetAudience": "All end-user organizations and individuals using SonicWall Secure Mobile Access (SMA) 1000 Series appliances.",
+    "riskAssessment": "Risk of arbitrary operating system command execution, Server-Side Request Forgery (SSRF), and compromise of affected systems.",
+    "impactAssessment": "Potential for unauthorized requests to internal or unintended locations, arbitrary operating system command execution with administrative privileges, unauthorized access to resources reachable through the appliance and compromise of affected appliances.",
+    "cves": [
+      "CVE-2026-15409",
+      "CVE-2026-15410"
     ],
     "solutionLinks": []
   },
@@ -147,26 +201,6 @@
     "solutionLinks": []
   },
   {
-    "title": "Multiple Vulnerabilities in SonicWall",
-    "severity": "critical",
-    "date": "2026-07-21",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0371",
-    "code": "CIVN-2026-0371",
-    "summary": "Multiple vulnerabilities have been reported in SonicWall Secure Mobile Access (SMA) 1000 Series appliances, which could allow a remote attacker to perform Server-Side Request Forgery (SSRF) or execute arbitrary operating system commands on the affected systems.",
-    "description": "SonicWall Secure Mobile Access (SMA) 1000 Series appliances are secure remote access",
-    "softwareAffected": [
-      "SonicWall Secure Mobile Access (SMA) 1000 Series appliances"
-    ],
-    "targetAudience": "All end-user organizations and individuals using SonicWall Secure Mobile Access (SMA) 1000 Series appliances.",
-    "riskAssessment": "Risk of arbitrary operating system command execution, Server-Side Request Forgery (SSRF), and compromise of affected systems.",
-    "impactAssessment": "Potential for unauthorized requests to internal or unintended locations, arbitrary operating system command execution with administrative privileges, unauthorized access to resources reachable through the appliance and compromise of affected appliances.",
-    "cves": [
-      "CVE-2026-15409",
-      "CVE-2026-15410"
-    ],
-    "solutionLinks": []
-  },
-  {
     "title": "Multiple Vulnerabilities in Apache Tomcat",
     "severity": "critical",
     "date": "2026-07-20",
@@ -187,32 +221,6 @@
     "cves": [
       "CVE-2026-59083",
       "CVE-2026-59084"
-    ],
-    "solutionLinks": []
-  },
-  {
-    "title": "Multiple Vulnerabilities in GitLab Community Edition (CE) and Enterprise Edition (EE)",
-    "severity": "high",
-    "date": "2026-07-17",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0368",
-    "code": "CIVN-2026-0368",
-    "summary": "Multiple vulnerabilities have been reported in GitLab that could be exploited by an attacker to execute arbitrary scripts, perform Cross-Site Scripting (XSS) attacks, gain unauthorized access to protected resources, and perform unauthorized actions on the targeted system.",
-    "description": "GitLab is a web-based DevOps platform that provides tools for software development, including source code management, continuous integration and continuous deployment. It is available as Community Edition (CE) and Enterprise Edition (EE). Multiple vulnerabilities exist in GitLab due to improper sanitization of user-supplied input, insufficient authorization controls, missing access-control checks and improper handling of Git reference name re",
-    "softwareAffected": [
-      "GitLab Community Edition (CE) and Enterprise Edition (EE) versions prior to 18.11.7, 19.0.4 and 19.1.2"
-    ],
-    "targetAudience": "All organizations and individuals using self-managed GitLab installations.",
-    "riskAssessment": "High risk of cross-site scripting, sensitive information disclosure, credential exposure and unauthorized modification of settings or records.",
-    "impactAssessment": "Potential for sensitive data theft, confidential information disclosure, session compromise through Cross-Site Scripting (XSS), unauthorized modification of settings or records, exposure of stored credentials, repository content manipulation, and loss of data integrity.",
-    "cves": [
-      "CVE-2026-6896",
-      "CVE-2026-13320",
-      "CVE-2026-11827",
-      "CVE-2026-8472",
-      "CVE-2026-7492",
-      "CVE-2025-12506",
-      "CVE-2026-13151",
-      "CVE-2026-6352"
     ],
     "solutionLinks": []
   },
@@ -246,6 +254,32 @@
       "CVE-2026-56155",
       "CVE-2026-56164",
       "CVE-2026-58644"
+    ],
+    "solutionLinks": []
+  },
+  {
+    "title": "Multiple Vulnerabilities in GitLab Community Edition (CE) and Enterprise Edition (EE)",
+    "severity": "high",
+    "date": "2026-07-17",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0368",
+    "code": "CIVN-2026-0368",
+    "summary": "Multiple vulnerabilities have been reported in GitLab that could be exploited by an attacker to execute arbitrary scripts, perform Cross-Site Scripting (XSS) attacks, gain unauthorized access to protected resources, and perform unauthorized actions on the targeted system.",
+    "description": "GitLab is a web-based DevOps platform that provides tools for software development, including source code management, continuous integration and continuous deployment. It is available as Community Edition (CE) and Enterprise Edition (EE). Multiple vulnerabilities exist in GitLab due to improper sanitization of user-supplied input, insufficient authorization controls, missing access-control checks and improper handling of Git reference name re",
+    "softwareAffected": [
+      "GitLab Community Edition (CE) and Enterprise Edition (EE) versions prior to 18.11.7, 19.0.4 and 19.1.2"
+    ],
+    "targetAudience": "All organizations and individuals using self-managed GitLab installations.",
+    "riskAssessment": "High risk of cross-site scripting, sensitive information disclosure, credential exposure and unauthorized modification of settings or records.",
+    "impactAssessment": "Potential for sensitive data theft, confidential information disclosure, session compromise through Cross-Site Scripting (XSS), unauthorized modification of settings or records, exposure of stored credentials, repository content manipulation, and loss of data integrity.",
+    "cves": [
+      "CVE-2026-6896",
+      "CVE-2026-13320",
+      "CVE-2026-11827",
+      "CVE-2026-8472",
+      "CVE-2026-7492",
+      "CVE-2025-12506",
+      "CVE-2026-13151",
+      "CVE-2026-6352"
     ],
     "solutionLinks": []
   },
@@ -393,6 +427,21 @@
     "solutionLinks": []
   },
   {
+    "title": "CERT-In Advisory CICA-2026-3536",
+    "severity": "high",
+    "date": "2026-07-13",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBADV01&CACODE=CICA-2026-3536",
+    "code": "CICA-2026-3536",
+    "summary": "Multiple vulnerabilities reported.",
+    "description": "",
+    "softwareAffected": "",
+    "targetAudience": "",
+    "riskAssessment": "",
+    "impactAssessment": "",
+    "cves": [],
+    "solutionLinks": []
+  },
+  {
     "title": "Multiple Vulnerabilities in Ivanti Sentry",
     "severity": "critical",
     "date": "2026-07-13",
@@ -449,21 +498,6 @@
       "CVE-2026-15087",
       "CVE-2026-15089"
     ],
-    "solutionLinks": []
-  },
-  {
-    "title": "CERT-In Advisory CICA-2026-3536",
-    "severity": "high",
-    "date": "2026-07-13",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBADV01&CACODE=CICA-2026-3536",
-    "code": "CICA-2026-3536",
-    "summary": "Multiple vulnerabilities reported.",
-    "description": "",
-    "softwareAffected": "",
-    "targetAudience": "",
-    "riskAssessment": "",
-    "impactAssessment": "",
-    "cves": [],
     "solutionLinks": []
   },
   {
