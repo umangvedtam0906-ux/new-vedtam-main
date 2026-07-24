@@ -130,6 +130,29 @@
     "solutionLinks": []
   },
   {
+    "title": "Multiple Vulnerabilities in TP-Link Products",
+    "severity": "high",
+    "date": "2026-07-21",
+    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0372",
+    "code": "CIVN-2026-0372",
+    "summary": "Multiple vulnerabilities have been reported in TP-Link products, which could allow an attacker on the same local network to disclose sensitive information, intercept encrypted communications through a Man-in-the-Middle (MITM) attack, expose geolocation information, and compromise the confidentiality of the affected devices.",
+    "description": "TP-Link Kasa EC70 and EC71 are smart security cameras that provide remote monitoring and surveillance capabilities for residential and enterprise environments. These vulnerabilities exist in TP-Link products due to the use of a hard-coded cryptographic private key within the firmware and exposure of sensitive geolocation information through the local discovery mechanism. Successful exploitation of these vulnerabilities could allow an attacker to disclose sensitive information, intercept encrypted communications through a Man-in-the-Middle (MITM) attack, expose geolocation information, and compromise the confidentiality of the affected devices.",
+    "softwareAffected": [
+      "TP-Link Kasa EC70 V4 firmware versions prior to 2.4.0 Build 20260520 rel. 4191",
+      "TP-Link Kasa EC71 V4 firmware versions prior to 2.4.0 Build 20260520 rel. 4191",
+      "TP-Link Kasa EC70 V4 firmware versions prior to 2.4.1 Build 20260621 rel. 76536",
+      "TP-Link Kasa EC71 V4 firmware versions prior to 2.4.1 Build 20260621 rel. 76536"
+    ],
+    "targetAudience": "All organizations and individuals using the affected TP-Link products.",
+    "riskAssessment": "High risk of sensitive information disclosure, compromise of encrypted communications through Man-in-the-Middle (MITM) attacks, and exposure of geolocation information.",
+    "impactAssessment": "Potential for disclosure of sensitive information, interception of encrypted communications, exposure of geolocation information, and compromise of the confidentiality of affected devices.",
+    "cves": [
+      "CVE-2026-9770",
+      "CVE-2026-13230"
+    ],
+    "solutionLinks": []
+  },
+  {
     "title": "Multiple Vulnerabilities in SonicWall",
     "severity": "critical",
     "date": "2026-07-21",
@@ -174,29 +197,6 @@
       "CVE-2026-47869",
       "CVE-2026-47870",
       "CVE-2026-47871"
-    ],
-    "solutionLinks": []
-  },
-  {
-    "title": "Multiple Vulnerabilities in TP-Link Products",
-    "severity": "high",
-    "date": "2026-07-21",
-    "link": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2026-0372",
-    "code": "CIVN-2026-0372",
-    "summary": "Multiple vulnerabilities have been reported in TP-Link products, which could allow an attacker on the same local network to disclose sensitive information, intercept encrypted communications through a Man-in-the-Middle (MITM) attack, expose geolocation information, and compromise the confidentiality of the affected devices.",
-    "description": "TP-Link Kasa EC70 and EC71 are smart security cameras that provide remote monitoring and surveillance capabilities for residential and enterprise environments. These vulnerabilities exist in TP-Link products due to the use of a hard-coded cryptographic private key within the firmware and exposure of sensitive geolocation information through the local discovery mechanism. Successful exploitation of these vulnerabilities could allow an attacker to disclose sensitive information, intercept encrypted communications through a Man-in-the-Middle (MITM) attack, expose geolocation information, and compromise the confidentiality of the affected devices.",
-    "softwareAffected": [
-      "TP-Link Kasa EC70 V4 firmware versions prior to 2.4.0 Build 20260520 rel. 4191",
-      "TP-Link Kasa EC71 V4 firmware versions prior to 2.4.0 Build 20260520 rel. 4191",
-      "TP-Link Kasa EC70 V4 firmware versions prior to 2.4.1 Build 20260621 rel. 76536",
-      "TP-Link Kasa EC71 V4 firmware versions prior to 2.4.1 Build 20260621 rel. 76536"
-    ],
-    "targetAudience": "All organizations and individuals using the affected TP-Link products.",
-    "riskAssessment": "High risk of sensitive information disclosure, compromise of encrypted communications through Man-in-the-Middle (MITM) attacks, and exposure of geolocation information.",
-    "impactAssessment": "Potential for disclosure of sensitive information, interception of encrypted communications, exposure of geolocation information, and compromise of the confidentiality of affected devices.",
-    "cves": [
-      "CVE-2026-9770",
-      "CVE-2026-13230"
     ],
     "solutionLinks": []
   },
